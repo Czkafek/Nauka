@@ -1,0 +1,29 @@
+#logo {
+    height: 12px;
+}
+#menu {
+    font-size: 15px;
+}
+#search-icon {
+    background-color: rgb(231, 231, 231);
+    font-size: 18px;
+    font-weight: 300;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-width: 1px;
+}
+#miniaturka1 {
+    width: 300px;
+    /*object-fit: cover; /* wtedy zdjęcie się powiększa do wymiarów danych i widac tylko część 
+    /*object-fit: contain; zdjęcie się zmniejsza, aż może całe się zmieścić do pudła */
+}
+#avatar1 {
+    border-radius: 36px;
+    width: 30px;
+    float: left;
+}
+#name1 {
+    width: 300px;
+}
