@@ -1,29 +1,51 @@
-#logo {
-    height: 12px;
+.episode {
+    font-size: 13px;
 }
-#menu {
-    font-size: 15px;
+.miniaturka {
+    width: 100%;
 }
-#search-icon {
-    background-color: rgb(231, 231, 231);
-    font-size: 18px;
-    font-weight: 300;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    border-width: 1px;
+.name {
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: 500;
+    line-height: 20px;
 }
-#miniaturka1 {
-    width: 300px;
-    /*object-fit: cover; /* wtedy zdjęcie się powiększa do wymiarów danych i widac tylko część 
-    /*object-fit: contain; zdjęcie się zmniejsza, aż może całe się zmieścić do pudła */
-}
-#avatar1 {
+.avatar {
     border-radius: 36px;
-    width: 30px;
-    float: left;
+    width: 100%;
 }
-#name1 {
-    width: 300px;
+.author {
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    color: rgb(103, 103, 103);
 }
+.data {
+    font-size: 12px;
+    margin-top: 0px;
+    color: rgb(103, 103, 103);
+}
+.avatardiv {
+    width: 35px;
+    vertical-align: top;
+}
+.dane {
+    width: 240px;
+}
+.dolna {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 20px;
+}
+/*#author1, #data1 {
+    display: inline-block;
+}*/
+/*object-fit: cover; /* wtedy zdjęcie się powiększa do wymiarów danych i widac tylko część 
+    /*object-fit: contain; zdjęcie się zmniejsza, aż może całe się zmieścić do pudła */
