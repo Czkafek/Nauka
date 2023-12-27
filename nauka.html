@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="nauka.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -111,7 +111,7 @@
     <br><br>
 
     <img src="googlelogo.png" alt="google logo" id="googlelogo">
-    <input id="googles" type="text" placeholder="Search Google or type a URL">
+    <div class="google-searchbar"><input id="googles" type="text" placeholder="Search Google or type a URL"></div>
 
     <br><br>
 
@@ -141,8 +141,7 @@
         <button id="dodajfrienda">Add Friend</button>
     </div>
 
-    <div id="addfriend-grid" style="
-    ">
+    <div id="addfriend-grid" style="">
         <div class="addfriend-grid-element">
             <img src="awatar.jpg" id="selfie-grid">
             <p id="friendname-grid">Oliver</p>
@@ -170,8 +169,215 @@
             </div>
             <button id="dodajfrienda-grid">Add Friend</button>
         </div>
-        
+    </div>
 
+        <div style="margin-top: 30px; box-shadow: 0px 0px 5px rgb(195, 195, 195); width: 300px; padding-left: 10px; padding-right: 10px; padding-top: 5px; padding-bottom: 5px;">
+            <div style="
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                ">
+                <div style="width: 45px;">
+                    <img src="awatar.jpg" alt="jung multi" style="
+                        width: 100%;
+                        border-radius: 25px;
+                        ">
+                </div>
+                <div style="flex: 1; margin-left: 10px; ">
+                    <p style="margin-top: 0px; margin-bottom: 2px; font-weight: bold; font-size: 14px;">jung multi</p>
+                    <p style="margin-top: 0px; margin-bottom: 2px; font-size: 14px; color: gray;">the raper</p>
+                    <p style="margin-top: 0px; margin-bottom: 2px; color: gray; font-size: 11px;">Noname</p>
+                </div>
+                <div>
+                    <button style="
+                        font-size: 14px;
+                        font-family: roboto;
+                        font-weight: 500;
+                        background-color: rgb(11, 169, 249);
+                        color: white;
+                        border-style: none;
+                        border-radius: 3px;
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                        padding-left: 9px;
+                        padding-right: 9px;
+                    ">Follow</button>
+                </div> 
+            </div>
+            <div style="
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                ">
+                <div style="width: 45px;">
+                    <img src="awatar.jpg" alt="jung multi" style="
+                        width: 100%;
+                        border-radius: 25px;
+                        ">
+                </div>
+                <div style="flex: 1; margin-left: 10px; ">
+                    <p style="margin-top: 0px; margin-bottom: 2px; font-weight: bold; font-size: 14px;">vampire</p>
+                    <p style="margin-top: 0px; margin-bottom: 2px; font-size: 14px; color: gray;">the acustic brother</p>
+                    <p style="margin-top: 0px; margin-bottom: 2px; color: gray; font-size: 11px;">Tik Tok Star</p>
+                </div>
+                <div>
+                    <button style="
+                        font-size: 14px;
+                        font-family: roboto;
+                        font-weight: 500;
+                        background-color: rgb(11, 169, 249);
+                        color: white;
+                        border-style: none;
+                        border-radius: 3px;
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                        padding-left: 9px;
+                        padding-right: 9px;
+                    ">Follow</button>
+                </div> 
+            </div>
+            <div style="
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                ">
+                <div style="width: 45px;">
+                    <img src="awatar.jpg" alt="jung multi" style="
+                        width: 100%;
+                        border-radius: 25px;
+                        ">
+                </div>
+                <div style="flex: 1; margin-left: 10px; ">
+                    <p style="margin-top: 0px; margin-bottom: 2px; font-weight: bold; font-size: 14px;">Opium boy</p>
+                    <p style="margin-top: 0px; margin-bottom: 2px; font-size: 14px; color: gray;">the twitcher</p>
+                    <p style="margin-top: 0px; margin-bottom: 2px; color: gray; font-size: 11px;">Acustic Specialist</p>
+                </div>
+                <div>
+                    <button style="
+                        font-size: 14px;
+                        font-family: roboto;
+                        font-weight: 500;
+                        background-color: rgb(11, 169, 249);
+                        color: white;
+                        border-style: none;
+                        border-radius: 3px;
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                        padding-left: 9px;
+                        padding-right: 9px;
+                    ">Follow</button>
+                </div> 
+            </div>
+        </div>
+
+    <div class="header2">
+        <div class="dom">Home</div>
+        <input type="text" placeholder="Search" class="searchbarheader">
+        <button class="download">Download</button>
+    </div>
+
+    <h1>Nested Flexbox</h1>
+    
+    <br>
+
+    <div style="
+        display: flex;
+    ">
+        <div style="
+            background-color: lightpink;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;    
+        ">
+            <p style="background-color: black; color: white;">item1</p>
+        </div>
+        <div style="
+            background-color: lightblue;
+            width: 200px;
+        "></div>
+    </div>
+
+    <br><br>
+
+    <div style="
+        display: flex
+    ">
+        <div style="background-color: lightpink; width: 100px;"></div>
+        <div style="
+            background-color: lightblue;
+            width: 200px;
+        ">
+            <div>row1</div>
+            <div class="row2">
+                <div class="row2-item">row2</div>
+                <div class="row2-item">row2</div>  
+            </div>       
+        </div>
+    </div>
+
+
+    <br><br>
+
+    <div class="Gmail-iOS">
+        <div class="row1">ALL INBOXES</div>
+        <div class="row22">
+            <div class="col1"><img src="awatar.jpg" class="col1-img"></div>
+            <div class="col2">
+                <div class="nested-row1">
+                    <div class="chewy">Chewy Promotions</div>
+                    <div class="nested-time">4:58 PM</div>
+                </div>
+                <div class="nested-row2">Biggest sales of the year!</div>
+                <div class="nested-row3">Hey there! We're  writing to tell you about our...</div>
+            </div>
+        </div>
+        <div class="row22">
+            <div class="col1"><img src="awatar.jpg" class="col1-img"></div>
+            <div class="col2">
+                <div class="nested-row1">
+                    <div class="chewy">Chewy Promotions</div>
+                    <div class="nested-time">4:58 PM</div>
+                </div>
+                <div class="nested-row2">Biggest sales of the year!</div>
+                <div class="nested-row3">Hey there! We're  writing to tell you about our...</div>
+            </div>
+        </div>
+        <div class="row22">
+            <div class="col1"><img src="awatar.jpg" class="col1-img"></div>
+            <div class="col2">
+                <div class="nested-row1">
+                    <div class="chewy">Chewy Promotions</div>
+                    <div class="nested-time">4:58 PM</div>
+                </div>
+                <div class="nested-row2">Biggest sales of the year!</div>
+                <div class="nested-row3">Hey there! We're  writing to tell you about our...</div>
+            </div>
+        </div>
+    </div>
+    
+    <br><br>
+
+    <div class="supersimple-dev">
+        <div class="supersimple-img-area">
+            <img class="supersimple-img" src="awatar.jpg">
+        </div>
+        <div class="supersimple-content">
+            <div class="supersimple-up">
+                <div class="supersimple-title">
+                    <div class="title">supersimple.dev</div>
+                    <div class="ping">@SupersimpleDev</div>
+                </div>
+                <div class="supersimple-message">What is backed web development? A complete overview. New video is up!</div>
+            </div>
+            <div class="supersimple-down">
+                <div class="supersimple-gray-area"></div>
+                <div class="supersimple-episode">
+                    <div class="supersimple-yt-link">youtube.com</div>
+                    <div class="supersimple-yt-desc">Backend web development - a complete overview (2021)</div>
+                </div>
+            </div>
+        </div>
     </div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
