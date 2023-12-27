@@ -1,7 +1,7 @@
 .video-grid {
     display: grid;
     column-gap: 15px;
-    row-gap: 20px;
+    row-gap: 40px;
 }
 
 @media (max-width: 1020px) {
@@ -21,7 +21,28 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
-
+@media (min-width: 1034px) {
+    .name {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+@media (max-width: 1033px) {
+    .name {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+@media (min-width: 1033px) {
+    .author-data {
+        font-size: 16px;
+    }
+}
+@media (max-width: 1034px) {
+    .author-data {
+        font-size: 14px;
+    }
+}
 .episode {
     font-size: 13px;
 }
@@ -29,7 +50,6 @@
     width: 100%;
 }
 .name {
-    font-size: 14px;
     margin-top: 0px;
     font-weight: 500;
     line-height: 20px;
@@ -40,13 +60,10 @@
     position: relative;
 }
 .author {
-    font-size: 12px;
     margin-top: 10px;
-    margin-bottom: 4px;
     color: rgb(103, 103, 103);
 }
 .data {
-    font-size: 12px;
     margin-top: 0px;
     color: rgb(103, 103, 103);
 }
