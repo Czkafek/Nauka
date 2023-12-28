@@ -1,0 +1,19 @@
+body{
+    height: 3000px;
+    font-family: roboto, arial;
+    margin: 0px;
+    background-color: black;
+}
+.flex {
+    display: flex; 
+    flex: 1;
+}
+.right {
+    background-color: lightblue;
+    flex: 1;
+}
+.left {
+    background-color: lightcoral;
+    flex: 1;
+    max-width: 580px;
+}

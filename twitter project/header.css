@@ -1,0 +1,94 @@
+.header {
+    display: flex;
+    font-weight: bold;
+    position: fixed;
+}
+.left-header {
+    display: flex;
+    width: 600px;
+    border: 1px solid rgb(46, 46, 46);
+    border-top-style: none;
+    border-left-style: none;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 1);
+}
+.dlaciebie-div {
+    padding: 13px 60px 13px 60px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex: 10;
+    transition: background-color 0.2s;
+    position: relative;
+}
+.dlaciebie-div:hover {
+    background-color: rgb(24, 24, 24);
+}
+.obserwujesz-div {
+    flex: 11;
+    padding: 13px 60px 13px 60px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(104, 103, 103);
+    transition: background-color 0.2s;
+    font-weight: 500;
+}
+.obserwujesz-div:hover {
+    background-color: rgb(24, 24, 24);
+}
+.settings-icon-div {
+    width: 25px;
+    padding: 13px;
+    padding-right: 16px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.material-symbols-outlined {
+    font-size: 18px;
+    transition: background-color 0.2s;
+    padding: 8px;
+    border-radius: 20px;
+    font-weight: 300;
+}
+.material-symbols-outlined:hover {
+    background-color: rgb(24, 28, 28);
+}
+.wyszukiwarka-div {
+    flex: 1;
+    display: flex;
+    padding: 7px 25px 7px 30px;
+    position: relative;
+}s
+.wyszukiwarka {
+    flex: 1;
+        background-color: rgb(24, 28, 28);
+        padding: 0px 0px 0px 50px;
+        font-size: 15px;
+        border: none;
+        border-radius: 100px;
+        width: 300px;
+    
+}
+.wyszukiwarka::placeholder {
+    color: rgb(113, 118, 123);
+}
+.wyszukiwarka-div i {
+    position: absolute;
+    color: rgb(113, 118, 123);;
+    left: 50px;
+    top: 22px;
+}
+.blue-sign {
+    position: absolute;
+    background-color: rgb(33, 154, 224);
+    height: 4px;
+    width: 75px;
+    bottom: 0;
+    border-radius: 5px;
+}
