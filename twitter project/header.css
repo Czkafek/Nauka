@@ -67,12 +67,12 @@
 }s
 .wyszukiwarka {
     flex: 1;
-        background-color: rgb(24, 28, 28);
-        padding: 0px 0px 0px 50px;
-        font-size: 15px;
-        border: none;
-        border-radius: 100px;
-        width: 300px;
+    background-color: rgb(24, 28, 28);
+    padding: 0px 0px 0px 50px;
+    font-size: 15px;
+    border: none;
+    border-radius: 100px;
+    width: 300px;
     
 }
 .wyszukiwarka::placeholder {
