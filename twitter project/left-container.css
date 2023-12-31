@@ -1,0 +1,120 @@
+.left-side-container {
+    position: fixed;
+    background-color: rgb(0, 0, 0);
+    width: 280px;
+    top: 0px;
+    bottom: 0px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: rgb(70, 70, 70);
+}
+.left-side {
+    display: grid;
+    grid-template-rows: 1fr 100px;
+}
+.logo {
+    width: 40px;
+}
+.logo-img {
+    width: 100%;
+}
+.inside-left-text {
+    font-size: 19px;
+}
+.left-side i {
+    margin-right: 10px;
+}
+.down-of-left-side {
+    background-color: rgb(222, 149, 149);
+    padding-top: 5px;
+    position: fixed;
+    display: flex;
+    justify-content: start;
+}
+.top-of-left-side {
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+}
+.icons {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 25px;
+    color: white;
+    padding-right: 20px;
+}
+.icons span {
+    font-size: 33px;
+}
+.names-of-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 80px;
+    row-gap: 34.8px;
+    color: white;
+
+}
+.logo-img-bigger { 
+    width: 36px;
+}
+.logo-img-small {
+    width: 30px;
+}
+.opublikuj-wpis-button {
+    height: 53px;
+    padding: 10px 55px 10px 55px;
+    border: none;
+    border-radius: 50px;
+    background-color: rgb(24, 148, 231);
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    position: fixed;
+    bottom: 445px;
+}
+.profil {
+    position: fixed;
+    width: 280px;
+    bottom: 18px;
+    color: white;
+}
+.profil-flex {
+    display: flex;
+}
+.profil-img {
+    width: 43px;
+}
+.jung-multi {
+    width: 100%;
+    border-radius: 50px;
+}
+.profil-zawartosc {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 15px;
+    padding-top: 3px;
+}
+.profil-nazwa {
+    font-weight: 500;
+}
+.profil-tag {
+    color: rgb(113, 118, 123);
+}
+.profil-more {
+    padding-right: 10px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profil-more span {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
