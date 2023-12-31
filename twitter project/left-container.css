@@ -8,61 +8,56 @@
     border-right-width: 1px;
     border-right-color: rgb(70, 70, 70);
 }
-.left-side {
-    display: grid;
-    grid-template-rows: 1fr 100px;
+.top-of-left-side {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
 }
-.logo {
-    width: 40px;
+.left-side-option {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: 54px;
 }
-.logo-img {
-    width: 100%;
+.left-side-option span {
+    font-size: 35px;
+}
+.left-side-option-for-hover {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    border-radius: 100px;
+    padding-right: 30px;
+    transition: background-color 0.2s;
+}
+.left-side-option-for-hover{
+    padding-right: 0px;
+}
+.left-side-option-for-hover:hover {
+    background-color: rgb(19, 19, 19);
 }
 .inside-left-text {
     font-size: 19px;
-}
-.left-side i {
-    margin-right: 10px;
-}
-.down-of-left-side {
-    background-color: rgb(222, 149, 149);
     padding-top: 5px;
-    position: fixed;
-    display: flex;
-    justify-content: start;
-}
-.top-of-left-side {
-    display: flex;
-    flex-direction: row;
     padding-left: 20px;
 }
-.icons {
-    padding-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    row-gap: 25px;
-    color: white;
-    padding-right: 20px;
+.down-of-left-side {
+    position: fixed;
 }
-.icons span {
-    font-size: 33px;
-}
-.names-of-icons {
+.logo-on-top {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: 80px;
-    row-gap: 34.8px;
-    color: white;
-
+    padding-top: 5px;
+    padding-bottom: 20px;
 }
 .logo-img-bigger { 
-    width: 36px;
+    width: 45px;
+    color: white;
+    padding-right: 5px;
 }
 .logo-img-small {
-    width: 30px;
+    width: 40px;
+    color: white;
 }
 .opublikuj-wpis-button {
     height: 53px;
@@ -117,4 +112,5 @@
     font-size: 20px;
     font-weight: bold;
     padding-bottom: 10px;
+    padding-right: 30px;
 }
