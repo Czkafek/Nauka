@@ -55,7 +55,6 @@
 }
 .logo-on-top {
     display: flex;
-    padding-bottom: 10px;
     padding-left: 1px;
 }
 .logo-img-bigger { 
@@ -81,7 +80,7 @@
 .profil {
     position: fixed;
     width: 280px;
-    bottom: 18px;
+    bottom: 15px;
     color: white;
 }
 .profil-flex {
