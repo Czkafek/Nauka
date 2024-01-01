@@ -31,10 +31,17 @@
     padding-right: 30px;
     transition: background-color 0.2s;
 }
-.left-side-option-for-hover{
-    padding-right: 0px;
-}
 .left-side-option-for-hover:hover {
+    background-color: rgb(19, 19, 19);
+}
+.left-side-option-for-hover-for-logo-on-top {
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    transition: background-color 0.2s;
+    padding: 5px;
+}
+.left-side-option-for-hover-for-logo-on-top:hover {
     background-color: rgb(19, 19, 19);
 }
 .inside-left-text {
@@ -48,12 +55,12 @@
 .logo-on-top {
     display: flex;
     padding-top: 5px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    padding-left: 1px;
 }
 .logo-img-bigger { 
     width: 45px;
     color: white;
-    padding-right: 5px;
 }
 .logo-img-small {
     width: 40px;
