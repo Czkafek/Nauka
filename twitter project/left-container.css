@@ -7,6 +7,7 @@
     border-right-style: solid;
     border-right-width: 1px;
     border-right-color: rgb(70, 70, 70);
+    z-index: 500;
 }
 .top-of-left-side {
     display: flex;
@@ -54,12 +55,11 @@
 }
 .logo-on-top {
     display: flex;
-    padding-top: 5px;
     padding-bottom: 10px;
     padding-left: 1px;
 }
 .logo-img-bigger { 
-    width: 45px;
+    width: 43px;
     color: white;
 }
 .logo-img-small {
