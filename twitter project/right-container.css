@@ -3,28 +3,29 @@
     color: white;
 }
 .blue-strip {
-    position: fixed;
+    position: absolute;
     background-color: rgb(50, 141, 216);
     width: 76px;
-    height: 4px;
-    top: 46px;
-    left: 902px;
+    height: 3px;
     z-index: 500;
     border-radius: 80px;
+    bottom: 0px;
+    left: 94px;
+}
+.div-blue-strip {
+    
 }
 .middle-container {
     display: flex;
     flex-direction: column;
-    width: 880px;
+    width: 590px;
     border-right: 1px solid rgb(70, 70, 70);
 }
 .middle-header {
     position: fixed;
     display: flex;
     flex-direction: row;
-    top: 0px;
-    left: 795px;
-    width: 600px;
+    width: 590px;
     height: 50px;
     align-items: center;
     font-size: 16px;
@@ -35,6 +36,7 @@
     flex: 1;
     padding: 15px 15px 15px 15px;
     transition: background-color 0.2s;
+    position: relative;
 }
 .dla-ciebie-text {
     font-weight: 500;
@@ -73,7 +75,6 @@
     grid-template-rows: 56px 56px;
     background-color: black;
     margin-top: 50px;
-    padding-left: 280px;
     border-bottom: 1px solid rgb(70, 70, 70);
 }
 .top-of-co-sie-dzieje {
@@ -91,7 +92,6 @@
 }
 .co-sie-dzieje-input {
     height: 40px;
-    z-index: 1000;
     background: none;
     border: none;
     color: rgb(166, 166, 166);
@@ -113,9 +113,7 @@
 }
 .icons-of-co-sie-dzieje span {
     font-size: 20px;
-    color: rgb(24, 148, 231);;
-}
-.co-sie-dzieje-icon {
+    color: rgb(24, 148, 231);
 }
 .opublikuj-wpis-right-section {
     padding: 10px 15px 10px 15px;
@@ -128,7 +126,12 @@
 }
 
 .nowe-wpisy {
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0px 15px 0px;
+    border-bottom: 1px solid rgb(70, 70, 70);
+    color: rgb(24, 148, 231);
 }
 .post {
 
