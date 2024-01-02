@@ -1,6 +1,7 @@
 .right-side-container {
     width: 1000px;
     color: white;
+    padding-left: 280px;
 }
 .blue-strip {
     position: absolute;
@@ -11,9 +12,6 @@
     border-radius: 80px;
     bottom: 0px;
     left: 94px;
-}
-.div-blue-strip {
-    
 }
 .middle-container {
     display: flex;
