@@ -132,5 +132,144 @@
     color: rgb(24, 148, 231);
 }
 .post {
+    display: flex;
+    flex-direction: row;
+    max-height: 500px;
+    padding: 10px 15px 10px 15px;
+    border-bottom: 1px solid rgb(70, 70, 70);
+}
+.post-avatar {
+    width: 40px;
+}
+.post-avatar img {
+    width: 100%;
+    border-radius: 50px;
+}
+.post-informations {
+    display: flex;
+    flex-direction: column;
+}
+.post-creator-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.creator {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.creator span {
+    color: rgb(24, 148, 231);
+    font-size: 18px;
+    padding: 0px 3px 0px 1px;
+}
+.creator-tag {
+    color: gray;
+}
+.post-more span {
+    color: gray;
+    font-weight: bold;
+    font-size: 20px;
+}
+.post-message {
+    padding-left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.post-content {
+    padding-left: 8px;
+}
+.post-pokaz-wiecej {
+    display: flex;
+    color: rgb(24, 148, 231);
+    font-weight: 500;
+    cursor: pointer;
+}
+.post-image {
+    padding-top: 20px;
+}
+.post-image-settings {
+    width: 100%;
+    max-height: 510px;
+    border-radius: 20px;
+    border: 1px solid rgb(24, 24, 24);
+}
+.post-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.post-bookmark-and-upload {
+    display: flex;
+}
+.post-stats-option {
+    display: flex;
+    align-items: center;
+    color: rgb(91, 91, 91);
+    font-size: 14px;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+.post-stats-option span {
+    padding: 8px;
+    font-size: 20px;
+    transition: color 0.3s;
+    transition: background-color 0.2s;
+    border-radius: 100px;
+}
+.post-stats-option:nth-child(1):hover {
+    color: rgb(24, 148, 231);
+}
+.post-stats-option:nth-child(1):hover span {
+    color: rgb(24, 148, 231);
+    background-color: rgba(24, 148, 231, 0.1);
+}
 
+.post-stats-option:nth-child(2):hover {
+    color: rgb(43, 138, 81);
+}
+.post-stats-option:nth-child(2):hover span {
+    color: rgb(43, 138, 81);
+    background-color: rgba(43, 138, 81, 0.1);
+}
+
+.post-stats-option:nth-child(3):hover {
+    color: rgb(231, 24, 55);
+}
+.post-stats-option:nth-child(3):hover span {
+    color: rgb(231, 24, 55);
+    background-color: rgba(231, 24, 55, 0.1);
+}
+
+.post-stats-option:nth-child(4):hover {
+    color: rgb(24, 148, 231);
+}
+.post-stats-option:nth-child(4):hover span {
+    color: rgb(24, 148, 231);
+    background-color: rgba(24, 148, 231, 0.1);
+}
+
+
+.post-stats-option-bookmark {
+    display: flex;
+    align-items: center;
+    color: rgb(91, 91, 91);
+    font-size: 14px;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+.post-stats-option-bookmark span {
+    padding: 8px;
+    font-size: 20px;
+    transition: color 0.3s;
+    transition: background-color 0.2s;
+    border-radius: 100px;
+}
+
+.post-stats-option-bookmark:hover span {
+    color: rgb(24, 148, 231);
+    background-color: rgba(24, 148, 231, 0.1);
 }
