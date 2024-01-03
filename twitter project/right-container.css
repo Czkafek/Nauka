@@ -140,10 +140,21 @@
 }
 .post-avatar {
     width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 40px;
 }
 .post-avatar img {
     width: 100%;
     border-radius: 50px;
+}
+.post-content {
+    padding-left: 8px;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid rgb(70, 70, 70);
+    padding-left: 20px;
 }
 .post-informations {
     display: flex;
@@ -163,7 +174,12 @@
 .creator span {
     color: rgb(24, 148, 231);
     font-size: 18px;
-    padding: 0px 3px 0px 1px;
+}
+.creator-name {
+    padding-right: 1px;
+}
+.creator-tag {
+    padding-left: 3px;
 }
 .creator-tag {
     color: gray;
@@ -178,11 +194,6 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-}
-.post-content {
-    padding-left: 8px;
-    display: flex;
-    flex-direction: column;
 }
 .post-pokaz-wiecej {
     display: flex;
