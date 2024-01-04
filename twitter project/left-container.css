@@ -34,6 +34,7 @@
     border-radius: 100px;
     padding-right: 30px;
     transition: background-color 0.2s;
+    cursor: pointer;
 }
 .left-side-option-for-hover:hover {
     background-color: rgb(19, 19, 19);
@@ -60,6 +61,7 @@
 .logo-img-bigger { 
     width: 43px;
     color: white;
+    cursor: pointer;
 }
 .logo-img-small {
     width: 40px;
@@ -75,13 +77,17 @@
 }
 .opublikuj-wpis-button {
     height: 53px;
-    padding: 10px 55px 10px 55px;
+    padding: 10px 55px 12px 55px;
     border: none;
     border-radius: 50px;
     background-color: rgb(24, 148, 231);
     color: white;
     font-size: 19px;
     font-weight: bold;
+    cursor: pointer;
+}
+.opublikuj-wpis-button:hover {
+    background-color: rgb(67, 149, 204);
 }
 .profil {
     width: 280px;
