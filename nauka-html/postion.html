@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nauka Position</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body style="padding-bottom: 10000px; padding-left: 80px; padding-top: 80px;">
+    
+
+    
+    <div style="
+        background-color: lightgreen; 
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        height: 40px;
+        z-index: 1; /*tells which element should be first, takie jakby warstwy. Czym większą wartość ma, to tym wyżej będzie, jak będzie miało najwyższy numer to będzie wyświetlany element na samej górze nad wszystkimi innymi elementami. Zaczyna się od 0 do nieskończoności*/
+        ">
+        header
+    </div>
+    <div style="background-color: lightsalmon; color: white; position: fixed; left: 0px; bottom: 0px; top: 40px; width: 72px;">sidebar
+        <div style="
+        position: absolute;
+        background-color: red;
+        color: white;
+        right: 0px;
+        top: 0px;
+        ">
+        X
+        </div>
+    </div>
+
+    <div style="
+    position: absolute;
+    background-color: red;
+    color: white;
+    right: 10px;
+    top: 60px;
+    ">
+    absolute
+    </div>
+
+    <div style="
+        background-color: lightblue; 
+        height: 200px; 
+        width: 200px; 
+        position: static;
+    ">
+        div 1</div>
+    <div style="
+        background-color: lightpink; 
+        height: 200px; 
+        width: 200px;
+        position: relative; /* if we put here postion absolute to będzie to dostosowywać się do danego obszaru, a takto ta funkcja sama z siebie nic nie robi*/
+    ">
+        div 2
+        <div style="
+        position: absolute;
+        background-color: black;
+        color: white;
+        right: 0px;
+        bottom: 0px;
+        ">
+        5:00
+        </div>
+    </div>
+    <!--elementy, które są na dole pliku, są wyświetlane wyrzej, niż te będące na górze pliku-->
+
+    <!--
+    <div style="position: fixed; top: 0px; left: 0px; bottom: 0px; width: 62px; background-color: rgb(40, 41, 45); display: flex; justify-content: start; align-items: center; padding-top: 10px; flex-direction: column;">
+        <div style="width: 42px;"><img style="width: 100%; border-radius: 50px; margin-bottom: 2px;" src="awatar.jpg"></div>
+
+        <div style="width: 42px;"><img style="width: 100%; border-radius: 50px;  margin-bottom: 2px;" src="awatar.jpg"></div>
+
+        <div style="width: 42px;"><img style="width: 100%; border-radius: 50px;" src="awatar.jpg"></div>
+    </div>A
+
+    <div style="position: fixed; top: 0px; bottom: 0px; left: 62px; width: 120px; background-color: rgb(48, 50, 54); display: flex; flex-direction: column; color: white; font-family: open sans; padding-left: 15px; padding-top: 10px; padding-right: 15px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="font-size: 10px; font-weight: 500;">INFO</div>
+            <div style="font-size: 20px; color: rgb(154, 154, 154);">+</div>
+        </div>
+        <div style="font-size: 11px; line-height: 30px; color: rgb(188, 188, 188);">
+            <div># new-videos</div>
+            <div># updates</div>
+            <div># faq</div>
+        </div>
+        </div>
+    -->
+    
+    
+    <!--
+    <div style=" position: fixed; top: 0px; left: 0px; right: 0px; display: flex; padding-top: 5px; padding-bottom: 5px; padding-left: 60px; padding-right: 40px; align-items: center; font-family: roboto; background-color: rgb(239, 239, 239);">
+        <div style="width: 40px;"><img style="width: 100%; border-radius: 20px; margin-top: 5px;" src="awatar.jpg"></div>
+        <div style="flex: 1; font-size: 15px; font-weight: bold; margin-left: 10px;">Oliver vampire</div>
+        <div>
+            <button style="width: 80px; padding-top: 5px; padding-bottom: 5px; background-color: rgb(49, 134, 224); border: none; border-radius: 2px; color: white; font-weight: 500;">Add Friend</button>
+            <button style="width: 80px; padding-top: 5px; padding-bottom: 5px; background-color: rgb(184, 188, 194); border: none; border-radius: 2px; font-weight: 600;">Message</button>
+        </div>
+    </div>
+    -->
+
+
+    <!--
+    <div style="position: fixed; width: 100px; background-color: lightseagreen;right: 0px; top: 0px;  bottom: 0px; color: white; font-size: 18px;">right sidebar</div>
+    
+    <div style="position: fixed; right: 0px; left: 0px; top: 0px;  bottom: 0px; background-color: rgba(0, 0, 0, 0.8); display: flex; align-items: center; justify-content: center;">
+        <div style="background-color: white; width: 400px; padding: 15px; border-radius: 5px; text-align: center;">
+            <div style="font-weight: bold;
+            font-size: 40px;
+            margin-bottom: 12px;">Modal Title</div>
+            <div  style="font-size: 20px; margin-bottom: 12px;">This is a modal</div>
+            <button style="font-size: 15px;">Close</button>
+        </div>
+    </div>
+    -->
+
+
+    <!--
+    <div style="top: 0px; bottom: 0px; left: 0px; right: 0px; background-color: black; position: fixed;">what's up</div>
+        
+    <div style="
+        background-color: lightgreen; 
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        height: 40px;
+    ">
+        header
+    </div>
+
+    <div style="background-color: lightsalmon; color: white; position: fixed; left: 0px; bottom: 0px; top: 40px; width: 72px;">sidebar</div>
+
+    <div style="position: fixed; bottom: 20px; right: 20px; color: white; background-color: black;">bottom-right</div>
+
+    <div style="
+        background-color: lightblue; 
+        height: 200px; 
+        width: 200px; 
+        position: static;
+    ">
+        div 1</div>
+    <div style="
+        background-color: lightpink; 
+        height: 200px; 
+        width: 200px;
+    ">
+        div 2</div>-->
+    <!--
+        top: 0px;
+         Defines how far away the element is from the top of the window, left, right
+        and bottom works the same
+         If we set it to oposite directions, the element will stretch out
+
+
+        position: static; - default position
+        position: fixed;  - nie rusza się z miejsca, np. header z searchbarem z yt
+        position:
+    -->
+</body>
+</html>

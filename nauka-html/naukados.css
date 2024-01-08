@@ -1,0 +1,27 @@
+p {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+}
+#model {
+    font-family: montserrat ;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+#order {
+    font-family: montserrat;
+}
+#touchless {
+    text-decoration: underline;
+}
+a {
+    color: black;
+}
+#tesla {
+    margin-top: 100px;
+    width: 35px;
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+}
