@@ -158,13 +158,29 @@
 */
 
 
-/* TERNARY OPERATOR */
-// shortcut to if{} and else{} statements
-// How to use it:
-// condition ? code-if-true : code-if-false
-let age = 18;
-age>=18 ? "You are an adult" : "You are a minor";
+/* TERNARY OPERATOR 
+    // shortcut to if{} and else{} statements
+    // How to use it:
+    // condition ? code-if-true : code-if-false
+    let age = 18;
+    age>=18 ? "You are an adult" : "You are a minor";
 
-let message = age>=18 ? "You are an adult" : "You are a minor";
+    let message = age>=18 ? "You are an adult" : "You are a minor";
 
-console.log(message);
+    console.log(message);
+*/
+
+
+/* STRING METHODS
+    let userName = '  Czkafek';
+
+    console.log(userName.charAt(0)); // .charAt(index)
+    console.log(userName.indexOf("k")); // .indexOf("szukany znak")
+    console.log(userName.lastIndexOf("k"));
+    console.log(userName.length); // długość stringa
+
+    userName = userName.trim(); // deletes white spaces if they occure
+    console.log(userName);
+
+    userName = userName.toUpperCase();
+*/
