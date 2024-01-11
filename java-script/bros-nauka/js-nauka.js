@@ -184,3 +184,66 @@
 
     userName = userName.toUpperCase();
 */
+
+
+/* METHOD CHAIN 
+
+    // No method chainging -> to compare
+
+        let username = window.prompt("Enter you username: ");
+
+        username = username.trim();
+        let letter = username.charAt(0);
+        letter = letter.toUpperCase();
+
+        let extraLetters = username.slice(1);
+        extraLetters = extraLetters.toLowerCase();
+
+        username = letter + extraLetters;
+
+        console.log(username);
+    // method chainging
+
+        username = username.trim().charAt(0).toUpperCase() + username.trim().slice(1).toLowerCase();
+
+        console.log(username);
+*/
+
+
+/* FUNCTION 
+
+    function happyBirthday(username, age) {
+        console.log("Happy birthday to you!");
+        console.log("Happy birthday to you!");
+        console.log(`Happy birthday dear ${username}!`);
+        console.log("Happy birthday to you!");
+        console.log(`You are ${age} years old`);
+    }
+    happyBirthday("Czkafek", 15);
+    happyBirthday("Spongebob", 30);
+
+    function add(x, y) {
+        let result = x + y;
+        return result;
+    }
+    let answer = add(2,3);
+    console.log(answer);
+
+    function substract(x,y) {
+        return x-y;
+    }
+    let substraction = substract(10, 4);
+    console.log(substraction);
+
+    function isEven(number) {
+        return number % 2 === 0 ? true : false
+    }
+    console.log(isEven(10));
+
+    function isEmailValid(email) {
+        return email.includes("@") ? true : false
+    }
+    console.log(isEmailValid("czkafek@gmail.com"));
+*/
+
+/*  */
