@@ -1,0 +1,32 @@
+#container {
+    font-family: roboto, arial;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+button {
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(101, 83, 236);
+    color: white;
+    font-weight: bold;
+    transition: opacity 0.1s;
+}
+button:hover {
+    opacity: 0.8;
+}
+button:active {
+    opacity: 0.6;
+}
+input {
+    font-size: 2rem;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+}
+#diceImages img{
+    width: 120px;
+    margin: 10px;
+}
