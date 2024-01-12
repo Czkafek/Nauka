@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature conversion</title>
+    <link rel="stylesheet" href="temp-conversion.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature conversion:</h1>
+        <input type="number" id="myInput">
+        <div class="radio-option">
+            <input type="radio" id="toFahren" name="temp">
+            <label for="toFahren">Celsius -> Fahrenhait</label>
+        </div>
+        <div class="radio-option">
+            <input type="radio" id="toCelsius" name="temp">
+            <label for="toCelsius">Fahrenheit -> Celsius</label>
+        </div>
+        <button type="button" onclick=" convert() " id="mySubmit">submit</button>
+        <p id="result">result</p>
+    </div>
+
+
+    <script src="temp-conversion.js"></script>
+</body>
+</html>
