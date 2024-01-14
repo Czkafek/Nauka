@@ -285,33 +285,243 @@
     }, 2000 ) // Makes this wait 2 seconds
     */
 
-/* forEach() */
-let numbers = [1, 2 ,3 ,4, 5];
+/* forEach() 
+    let numbers = [1, 2 ,3 ,4, 5];
 
-numbers.forEach(triple);
-numbers.forEach(display);
+    numbers.forEach(triple);
+    numbers.forEach(display);
 
-function display(element) {
-    console.log(element);
+    function display(element) {
+        console.log(element);
+    }
+
+    function double(element, index, array) {
+        array[index] = element*2;
+    }
+
+    function triple(element, index, array) {
+        array[index] = element*3;
+    }
+
+    let fruits = ["apple", "banana", "orange", "coconut"];
+
+    fruits.forEach(capitalize);
+    fruits.forEach(display);
+
+    function upperCase(element, index, array) {
+        array[index] = element.toUpperCase();
+    }
+
+    function capitalize(element, index, array) {
+        array[index] = element.charAt(0).toUpperCase() + element.slice(1);
+    }
+*/
+
+
+/* MAP METHOD 
+    // .map()
+    // accepts a callback and applies that function to each element of an array, then return a new array
+
+    const numbers = [1, 2, 3, 4, 5];
+
+    const squares = numbers.map(square);
+    const cubes = numbers.map(cube);
+
+    console.log(squares);
+    console.log(cubes);
+
+    function square(element) {
+        return Math.pow(element, 2);
+    }
+
+    function cube(element) {
+        return Math.pow(element, 3);
+    }
+
+    const students = ["Mike", "Wiktor", "Gocha", "Lotka"];
+
+    const studentsUpper = students.map(toUpperCase);
+    const studentsLower = students.map(toLowerCase);
+
+    console.log(studentsUpper);
+    console.log(studentsLower);
+
+    function toUpperCase(element) {
+        return element.toUpperCase();
+    }
+
+    function toLowerCase(element) {
+        return element.toLowerCase();
+    }
+
+
+    const dates = ["2024-1-10", "2025-4-20", "2021-9-29"];
+    const formatedDates = dates.map(formatDates);
+
+    console.log(formatedDates);
+
+    function formatDates(element) {
+        const parts = element.split("-");
+        return `${parts[1]}/${parts[2]}/${parts[0]}`;
+    }
+*/
+
+
+/* FILTER METHOD 
+    // .filter() = creates a new array by filtering out elements
+
+    let numbers = [1, 2, 3, 4, 5, 6, 7];
+    let evenNums = numbers.filter(isEven);
+    let oddNums = numbers.filter(isOdd);
+
+    console.log(evenNums);
+    console.log(oddNums);
+
+    function isEven(element) {
+        return element % 2 === 0;
+    }
+
+    function isOdd(element) {
+        return element % 2 !== 0;
+    }
+
+    const ages = [16, 17, 18, 18, 19, 20, 60];
+    const adults = ages.filter(isAdult);
+    const children = ages.filter(isChild);
+
+    console.log(adults);
+    console.log(children);
+
+    function isAdult(element) {
+        return element >= 18;
+    }
+
+    function isChild(element) {
+        return element < 18;
+    }
+
+
+    const words = ["apple", 'orange', 'banana', 'coconut', 'kiwi', 'granate'];
+    const short = words.filter(getShort);
+    const long = words.filter(getLong);
+
+    console.log(short);
+    console.log(long);
+
+    function getShort(element){
+        return element.length <= 6;
+    }
+
+    function getLong(element) {
+        return element.length > 6;
+    }
+*/
+
+
+/* REDUCE METHOD
+    // .reduce() = reduce the elements of an array to  a single value
+
+    const prices = [10, 5, 69, 42]
+
+    const total = prices.reduce(sum);
+
+    console.log(`$${total}`);
+
+    function sum(accumulator, element) {
+        return accumulator + element;
+        // accumulator = previous element
+        // element = current element
+        // You can rename this names
+    }
+
+    const grades = [75, 50, 90, 80, 69, 42, 91];
+
+    const max = grades.reduce(getMax);
+
+    console.log(max);
+
+    function getMax(previousElement, element) {
+        return Math.max(previousElement, element);
+    }
+*/
+
+
+/* FUNCTION */
+// function declaration = define a reusable block of code 
+//                        that performs a specific task
+
+function hello() {
+    console.log("hello");
+}
+hello();
+
+// function exxpressions = a way to define functions 
+//                         as values or variables
+
+const bye = function() {
+    console.log("Bye");
+}
+bye();
+
+const numbers = [1, 2, 3, 4, 5, 6]; 
+
+const powered = numbers.map(power);
+
+console.log(powered);
+
+function power(element) {
+    return Math.pow(element, 2);
 }
 
-function double(element, index, array) {
-    array[index] = element*2;
-}
+// setTimeout(callback, 3000);
+// setTimeout(hello, 3000);
+setTimeout(function() {
+    console.log("Hello");
+}, 2000)
 
-function triple(element, index, array) {
-    array[index] = element*3;
-}
+const num = [1, 2, 3, 4, 5, 6]; 
 
-let fruits = ["apple", "banana", "orange", "coconut"];
+const squares = num.map(function (element) {
+    return Math.pow(element, 2);
+});
 
-fruits.forEach(capitalize);
-fruits.forEach(display);
+console.log(squares);
 
-function upperCase(element, index, array) {
-    array[index] = element.toUpperCase();
-}
+const evenNums = num.filter( function(element) {
+    return element % 2 === 0;
+})
+const oddNums = num.filter(function(element) {
+    return element % 2 !== 0;
+});
 
-function capitalize(element, index, array) {
-    array[index] = element.charAt(0).toUpperCase() + element.slice(1);
-}
+const total = num.reduce(function( previousElement,element) {
+    return previousElement + element;
+});
+
+console.log(evenNums);
+console.log(oddNums);
+console.log(total);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
