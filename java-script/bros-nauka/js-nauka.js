@@ -246,4 +246,72 @@
     console.log(isEmailValid("czkafek@gmail.com"));
 */
 
-/*  */
+/* CALLBACK
+    //U pass a function as an argument to another function without (), funkcja dostająca argument powinna mieć zmienną, np. callback, a następnie wywołać ją na końcu funkcji
+    hello(leave);
+
+    function hello(callback) {
+        console.log("hello!");
+        callback();
+    }
+
+    function leave() {
+        console.log("leave");
+    }
+
+    function goodbye() {
+        console.log("goodbye!");
+    }
+
+    sum(displayPage, 1, 2)
+
+    function sum(callback, x, y) {
+        let result = x + y;
+        callback(result);
+    }
+
+    function display(result) {
+        console.log(result);
+    }
+
+    function displayPage(result) {
+        document.getElementById("myH1").textContent = result;
+    }
+ */
+
+    /*
+    setTimeout(function() {
+        console.log("hello!");
+    }, 2000 ) // Makes this wait 2 seconds
+    */
+
+/* forEach() */
+let numbers = [1, 2 ,3 ,4, 5];
+
+numbers.forEach(triple);
+numbers.forEach(display);
+
+function display(element) {
+    console.log(element);
+}
+
+function double(element, index, array) {
+    array[index] = element*2;
+}
+
+function triple(element, index, array) {
+    array[index] = element*3;
+}
+
+let fruits = ["apple", "banana", "orange", "coconut"];
+
+fruits.forEach(capitalize);
+fruits.forEach(display);
+
+function upperCase(element, index, array) {
+    array[index] = element.toUpperCase();
+}
+
+function capitalize(element, index, array) {
+    array[index] = element.charAt(0).toUpperCase() + element.slice(1);
+}
