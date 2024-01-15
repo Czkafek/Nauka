@@ -446,61 +446,262 @@
 */
 
 
-/* FUNCTION */
-// function declaration = define a reusable block of code 
-//                        that performs a specific task
+/* FUNCTION
+    // function declaration = define a reusable block of code 
+    //                        that performs a specific task
 
-function hello() {
-    console.log("hello");
-}
-hello();
+    function hello() {
+        console.log("hello");
+    }
+    hello();
 
-// function exxpressions = a way to define functions 
-//                         as values or variables
+    // function exxpressions = a way to define functions 
+    //                         as values or variables
 
-const bye = function() {
-    console.log("Bye");
-}
-bye();
+    const bye = function() {
+        console.log("Bye");
+    }
+    bye();
 
-const numbers = [1, 2, 3, 4, 5, 6]; 
+    const numbers = [1, 2, 3, 4, 5, 6]; 
 
-const powered = numbers.map(power);
+    const powered = numbers.map(power);
 
-console.log(powered);
+    console.log(powered);
 
-function power(element) {
-    return Math.pow(element, 2);
-}
+    function power(element) {
+        return Math.pow(element, 2);
+    }
 
-// setTimeout(callback, 3000);
-// setTimeout(hello, 3000);
-setTimeout(function() {
-    console.log("Hello");
-}, 2000)
+    // setTimeout(callback, 3000);
+    // setTimeout(hello, 3000);
+    setTimeout(function() {
+        console.log("Hello");
+    }, 2000)
 
-const num = [1, 2, 3, 4, 5, 6]; 
+    const num = [1, 2, 3, 4, 5, 6]; 
 
-const squares = num.map(function (element) {
-    return Math.pow(element, 2);
-});
+    const squares = num.map(function (element) {
+        return Math.pow(element, 2);
+    });
+
+    console.log(squares);
+
+    const evenNums = num.filter( function(element) {
+        return element % 2 === 0;
+    })
+    const oddNums = num.filter(function(element) {
+        return element % 2 !== 0;
+    });
+
+    const total = num.reduce(function( previousElement,element) {
+        return previousElement + element;
+    });
+
+    console.log(evenNums);
+    console.log(oddNums);
+    console.log(total);
+
+*/
+
+
+/* arrow function 
+// a concise way to write function expressions good for 
+// simple functions that you use only once 
+// (parameters) => some code
+
+const hello = (name, age) => {console.log(`Hello ${name}`)
+                        console.log(`You are ${age} years old`);
+};
+hello("Wiktor", 15);
+
+setTimeout(() => console.log('Bye'), 2000);
+
+const numbers = [1, 2, 3, 4, 5, 6];
+
+const squares = numbers.map((element) => Math.pow(element, 2));
+const evenNumbers = numbers.filter((element) => element % 2 === 0);
+const oddNumbers = numbers.filter((element) => element % 2 === 1);
+const sum = numbers.reduce((prevElement, element) => prevElement + element);
 
 console.log(squares);
+console.log(evenNumbers);
+console.log(oddNumbers);
+console.log(sum);
 
-const evenNums = num.filter( function(element) {
-    return element % 2 === 0;
-})
-const oddNums = num.filter(function(element) {
-    return element % 2 !== 0;
-});
+*/
 
-const total = num.reduce(function( previousElement,element) {
-    return previousElement + element;
-});
 
-console.log(evenNums);
-console.log(oddNums);
-console.log(total);
+/* OBJECTS
+    // a collection of related properties and/or methods
+    // Can represent real world objects (people, products, places)
+    // object = {key:value,
+    //           function()}
+
+    const person1 = {
+        firstName: "Wiktor",
+        lastName: "Czkafek",
+        age: 15,
+        isStudent: true,
+        sayHello: function() {console.log(`Hi! I am ${this.firstName}`)},
+        eat: function() {console.log('I am eating a small people!')},
+    }
+    console.log(person1.firstName);
+    console.log(person1.lastName);
+    console.log(person1.age);
+    console.log(person1.isStudent);
+    person1.sayHello();
+    person1.eat();
+
+    console.log("--------------------------------------");
+
+    const person2 = {
+        firstName: "Małgorzata",
+        lastName: "Gocha",
+        age: 16, //babcia
+        isStudent: true,
+        sayHello: () => console.log(`Hi! I am ${person2.firstName}`), // With arrow function this. method is not working
+        eat: () => console.log('I eat your mom UwU'),
+    }
+    console.log(person2.firstName);
+    console.log(person2.lastName);
+    console.log(person2.age);
+    console.log(person2.isStudent);
+    person2.sayHello();
+    person2.eat();
+
+*/
+
+
+/* CONSTRUCTOR
+    // special method for defininf the
+    // properties and methods of objects
+
+    function Car(make, model, year, color) {
+        this.make = make,
+        this.model = model,
+        this.year = year,
+        this.color = color,
+        this.drive = function() {
+            console.log(`You drive the ${this.make} ${this.model}`)
+        }
+    }
+
+    const car1 = new Car("Dodge", "Challenger", 1970, "black");
+    const car2 = new Car('Ferrari', '348 ts', 1990, 'red'); // color: red, bo jaki inny
+
+
+    console.log(car1.make);
+    console.log(car1.model);
+    console.log(car1.year);
+    console.log(car1.color);
+    car1.drive();
+    console.log("--------------------------------------");
+    console.log(car2.make);
+    console.log(car2.model);
+    console.log(car2.year);
+    console.log(car2.color);
+    car2.drive();
+
+*/
+
+
+/* CLASSES
+    // (ES6 feature) provides a more structured and cleaner way to 
+    //  work with object compared to traditional constructor functions
+    //  ex. static keyword, excapsulation, inheritance
+    //  encapsulation
+
+    class Product{
+        constructor(name, price) {
+            this.name = name,
+            this.price = price
+        }
+
+        displayProduct() {
+            console.log(`Product: ${this.name} $${this.price.toFixed(2)}`); // only 2 decimals are now shown
+        }
+
+        calculateTotal(salesTax) {
+            return (this.price + (this.price * salesTax)).toFixed(2);
+        }
+    }
+    const salesTax = 0.1;
+
+    const product1 = new Product("T-shirt", 9.99);
+    const total1 = product1.calculateTotal(salesTax);
+
+    const product2 = new Product("Baggy Jeans", 19.99);
+    const total2 = product2.calculateTotal(salesTax);
+
+    const product3 = new Product("Shoes", 69.42);
+    const total3 = product3.calculateTotal(salesTax);
+
+    product1.displayProduct();
+    console.log(`Total price: $${total1}`);
+    console.log("-------------------------");
+    product2.displayProduct();
+    console.log(`Total price: $${total2}`);
+    console.log("-------------------------");
+    product3.displayProduct();
+    console.log(`Total price: $${total3}`);
+
+*/
+
+
+/* STATIC */
+// keyword that defines properties or methods that belong
+// to a class itslef rather than the objects created
+// from that class (class owns anything static, not the objects)
+
+class MathUtil {
+    static PI = 3.14159;
+
+    static getDiameter(radius) {
+        return radius * 2;
+    }
+    static getCircumference(radius) {
+        return this.PI * radius * 2;
+    }
+    static getArea(radius) {
+        return this.PI * radius * radius;
+    }
+}
+
+console.log(MathUtil.PI);
+console.log(MathUtil.getDiameter(10));
+console.log(MathUtil.getCircumference(10));
+console.log(MathUtil.getArea(10));
+
+console.log("-------------------------");
+
+class User {
+    static userCount = 0;
+
+    constructor(username){
+        this.username = username,
+        User.userCount++;
+    }
+
+    static getUserCount() {
+        console.log(`There are ${User.userCount} users online`);
+    }
+
+    sayHello() {
+        console.log(`Hello, my username is ${this.username}`)
+    }
+}
+
+const user1 = new User("Czkafek");
+const user2 = new User("Szyszek");
+
+user1.sayHello();
+user2.sayHello();
+
+console.log(User.userCount);
+User.getUserCount();
+
+
 
 
 
