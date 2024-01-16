@@ -574,7 +574,7 @@ console.log(sum);
 
 
 /* CONSTRUCTOR
-    // special method for defininf the
+    // special method for defining the
     // properties and methods of objects
 
     function Car(make, model, year, color) {
@@ -649,7 +649,7 @@ console.log(sum);
 */
 
 
-/* STATIC */
+/* STATIC
 // keyword that defines properties or methods that belong
 // to a class itslef rather than the objects created
 // from that class (class owns anything static, not the objects)
@@ -700,8 +700,165 @@ user2.sayHello();
 
 console.log(User.userCount);
 User.getUserCount();
+*/
 
 
+/* ENEMY CLASS CONCEPT
+    class Enemy {
+        constructor(name, age, weapon, height, breed, health, maxhealth, armor) {
+            this.name = name,
+            this.age = age,
+            this.weapon = weapon,
+            this.height = height,
+            this.breed = breed,
+            this.health = health,
+            this.maxhealth = maxhealth,
+            this.armor = armor
+        }
+
+        hasBeenAttacked(hitPoints) {
+            this.health = this.armor ? this.health - Math.floor(hitPoints*0.8) : this.health - hitPoints;
+        }
+    }
+
+    const enemy1 = new Enemy("Czkafek", 69, "fists", 420, "Ogr", 30, 30, true);
+
+    enemy1.hasBeenAttacked(5);
+    console.log(enemy1.health);
+
+ */
+
+/* INHERITANCE
+// allowas a new class to inherit properties and methods
+// from an existing class (paren -> child)
+// helps with code reusability
+
+class Animal {
+    alive = true;
+
+    eat(){
+        console.log(`This ${this.name} is eating`);
+    }
+    sleep() {
+        console.log(`This ${this.name} is sleeping`);
+    }
+}
+
+class Rabbit extends Animal{ 
+    name = "rabbit";
+
+    jump() {
+        console.log(`This ${this.name} is jumping`)
+    }
+}
+class Fish extends Animal { 
+    name = "fish";
+
+    swimming() {
+        console.log(`This ${this.name} is swimming`)
+    }
+}
+class Dog extends Animal {
+    name = "dog";
+
+    bark() {
+        console.log(`This ${this.name} is barking`)
+    }
+}
+
+const rabbit = new Rabbit("Heniek");
+const fish = new Fish("Tadeusz");
+const dog = new Dog("Reksio");
+
+fish.alive = false;
+
+console.log(rabbit.alive);
+console.log(fish.alive);
+console.log(dog.alive);
+
+console.log('');
+
+rabbit.eat();
+fish.eat();
+dog.eat();
+
+console.log('');
+
+rabbit.sleep();
+fish.sleep();
+dog.sleep();
+
+console.log('');
+
+rabbit.jump();
+fish.swimming();
+dog.bark();
+
+ */
+
+/* SUPER */
+// keyword is used in classes to call the contructor or 
+// acces the properties and methods of a parent (superclass)
+// this = this object
+// super - the parent
+
+class Animal {
+    constructor(name, age) {
+        this.name = name,
+        this.age = age
+    }
+
+    move(speed) {
+        console.log(`${this.name} moves at a speed of ${speed}km/h`)
+    }
+
+}
+class Rabbit extends Animal {
+    constructor(name, age, runspeed) {
+        super(name, age);
+        this.runspeed = runspeed
+    }
+
+    run() {
+        console.log(`${this.name} can run`);
+        super.move(this.runspeed);
+    }
+
+}
+class Fish extends Animal {
+    constructor(name, age, swimspeed) {
+        super(name, age);
+        this.swimspeed = swimspeed
+    }
+
+    swim() {
+        console.log(`${this.name} can swim`);
+        super.move(this.swimspeed);
+    }
+
+}
+class Bird extends Animal {
+    constructor(name, age, flyspeed) {
+        super(name, age);
+        this.flyspeed = flyspeed
+    }
+
+    fly() {
+        console.log(`${this.name} can fly`);
+        super.move(this.flyspeed);
+    }
+
+}
+
+const rabbit = new Rabbit("Heniek", 5, 60);
+const fish = new Fish("Tadek", 3, 20);
+const bird = new Bird("Krzysiu", 5, 50);
+console.log(rabbit);
+rabbit.run(); 
+console.log("");
+fish.swim();
+console.log("");
+bird.fly();
 
 
 
