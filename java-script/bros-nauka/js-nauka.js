@@ -796,7 +796,7 @@ dog.bark();
 
  */
 
-/* SUPER */
+/* SUPER
 // keyword is used in classes to call the contructor or 
 // acces the properties and methods of a parent (superclass)
 // this = this object
@@ -859,6 +859,223 @@ console.log("");
 fish.swim();
 console.log("");
 bird.fly();
+
+ */
+
+/* SETTER and GETTER
+
+class Rectangle {
+    constructor(width, height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    set width(newWidth) {
+        if(newWidth > 0) {
+            this._width = newWidth;
+        }
+        else { 
+            console.error('Width must be a positive number!');
+        }
+    }
+
+    set height(newHeight) {
+        if(newHeight > 0) {
+            this._height = newHeight;
+        }
+        else {
+            console.error("Height must be a positive number!");
+        }
+    }
+
+    get width() {
+        return `${this._width.toFixed(1)} cm`;
+    }
+
+    get height() {
+        return `${this._height.toFixed(1)} cm`;
+    }
+
+    get area() {
+        return `${(this._width * this._height).toFixed(1)} cm^2 `;
+    }
+    get mom() {
+        if( this._width !== this._height ) {
+            return `mom is mad`;
+        }
+        else {
+            return `mom is happy`
+        }
+    }
+}
+
+const rectangle1 = new Rectangle(4, 4);
+
+console.log(rectangle1.width);
+console.log(rectangle1.height);
+console.log(rectangle1.area);
+console.log(rectangle1.mom);
+
+*/
+
+/* DESTRUCTURING
+
+    // --------- Example 1 --------- 
+        let a = 1;
+        let b = 2;
+        [a, b] = [b, a];
+        console.log(a); // shows 2
+        console.log(b); // shows 1
+
+        console.log('');
+    // --------- Example 2 ---------
+        let colors = ["blue", "green", "red", "white", "black"];
+        [colors[0], colors[1]] = [colors[1], colors[0]];
+        console.log(colors[0]); // shows green
+        console.log(colors[1]); // shows blue
+
+        console.log('');
+    // --------- Example 3 ---------
+        let themes = ["blue", "green", "red", "white", "black"];
+
+        const [firstTheme, secondTheme, thirdTheme, ...extraThemes] = themes;
+
+        console.log(firstTheme); // blue
+        console.log(secondTheme); // green
+        console.log(thirdTheme); // red
+        console.log(extraThemes); // white and black
+
+        console.log('');
+    // --------- Example 4 ---------
+
+        const gocha = {
+            name: "Małgorzata",
+            surname: "Babcia",
+            age: 420,
+            school: "Staszic"
+        }
+
+        const {name, surname, age, school} = gocha; // names must be the same as in the object
+
+        console.log(name);
+        console.log(surname);
+        console.log(age);
+        console.log(school);
+
+        console.log('');
+    // --------- Example 5 ---------
+
+        function displayChomik({name, surname, age, school = "your Mom"}) {
+            console.log(name);
+            console.log(surname);
+            console.log(age);
+            console.log(school);
+        }
+
+        const chomik = {
+            name: "Wiktor",
+            surname: "Chomik",
+            age: 9,
+        }
+        displayChomik(chomik);
+
+ */
+
+
+/* NESTED OBJECTS
+
+const person = {
+    name: "Wiktor",
+    surname: "czkafek",
+    age: 69,
+    addres: {
+        street: "Candy 42 st.",
+        country: "Poland",
+        continent: "Europe"
+    }
+}
+console.log(person.addres);
+
+for( const property in person.addres) {
+    console.log(person.addres[property]);
+}
+
+class Person {
+
+    constructor(name, surname, age, ...address) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.address = new Address(...address);
+    }
+}
+
+class Address {
+
+    constructor(street, country, continent) {
+        this.street = street;
+        this.country = country;
+        this.continent = continent;
+    }
+}
+
+const person1 = new Person("Wiktor", "Czkafek", 15, "Cukierkowa 15", "Polska", "Europa");
+console.log(person1);
+console.log(person1.address)
+
+for(const property in person1.address) {
+    console.log(person1.address[property]);
+}
+
+ */
+
+
+/* ARRAY OF OBJECTS
+
+    const fruits = [{name: 'banana', color: 'yellow', weight: 95},
+                    {name: 'apple', color: 'red', weight: 69}, 
+                    {name: 'orange', color: 'orange', weight: 78}, 
+                    {name: 'kiwi', color: 'brown', weight: 25}]
+
+    console.log(fruits);
+
+    fruits.push({name: 'plum', color: 'purple', weight: 30});
+
+    console.log(fruits);
+
+    fruits.forEach(fruit => console.log(fruit));
+
+    const fruitNames = fruits.map(fruit => fruit.name);
+
+    console.log(fruitNames);
+
+    const yellowFruits = fruits.filter(fruit => fruit.color === 'yellow');
+    const lowWeightFrutis = fruits.filter(fruit => fruit.weight < 50);
+
+    console.log(yellowFruits);
+    console.log(lowWeightFrutis)
+
+    const maxFruit = fruits.reduce((max,fruit) => fruit.weight > max.weight ? fruit : max);
+    console.log(maxFruit);
+
+ */
+
+
+/* sort() METHOD */
+
+let numbers = [1, 10, 8 , 9, 2, 3, 18, 7];
+
+numbers.sort((a, b) => a-b);
+console.log(numbers);
+
+const people = [{name: 'Wiktor', age: 15, height: 188}, 
+              {name: 'Gocha', age: 16, height: 161}, 
+              {name: 'Chomik', age: 14, height: 167}, 
+              {name: 'Adam', age: 15, height: 175}];
+
+people.sort((a, b) => a.name.localeCompare(b.name));
+
+console.log(people);
 
 
 
