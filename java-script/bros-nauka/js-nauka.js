@@ -733,188 +733,188 @@ User.getUserCount();
 // from an existing class (paren -> child)
 // helps with code reusability
 
-class Animal {
-    alive = true;
+    class Animal {
+        alive = true;
 
-    eat(){
-        console.log(`This ${this.name} is eating`);
+        eat(){
+            console.log(`This ${this.name} is eating`);
+        }
+        sleep() {
+            console.log(`This ${this.name} is sleeping`);
+        }
     }
-    sleep() {
-        console.log(`This ${this.name} is sleeping`);
+
+    class Rabbit extends Animal{ 
+        name = "rabbit";
+
+        jump() {
+            console.log(`This ${this.name} is jumping`)
+        }
     }
-}
+    class Fish extends Animal { 
+        name = "fish";
 
-class Rabbit extends Animal{ 
-    name = "rabbit";
-
-    jump() {
-        console.log(`This ${this.name} is jumping`)
+        swimming() {
+            console.log(`This ${this.name} is swimming`)
+        }
     }
-}
-class Fish extends Animal { 
-    name = "fish";
+    class Dog extends Animal {
+        name = "dog";
 
-    swimming() {
-        console.log(`This ${this.name} is swimming`)
+        bark() {
+            console.log(`This ${this.name} is barking`)
+        }
     }
-}
-class Dog extends Animal {
-    name = "dog";
 
-    bark() {
-        console.log(`This ${this.name} is barking`)
-    }
-}
+    const rabbit = new Rabbit("Heniek");
+    const fish = new Fish("Tadeusz");
+    const dog = new Dog("Reksio");
 
-const rabbit = new Rabbit("Heniek");
-const fish = new Fish("Tadeusz");
-const dog = new Dog("Reksio");
+    fish.alive = false;
 
-fish.alive = false;
+    console.log(rabbit.alive);
+    console.log(fish.alive);
+    console.log(dog.alive);
 
-console.log(rabbit.alive);
-console.log(fish.alive);
-console.log(dog.alive);
+    console.log('');
 
-console.log('');
+    rabbit.eat();
+    fish.eat();
+    dog.eat();
 
-rabbit.eat();
-fish.eat();
-dog.eat();
+    console.log('');
 
-console.log('');
+    rabbit.sleep();
+    fish.sleep();
+    dog.sleep();
 
-rabbit.sleep();
-fish.sleep();
-dog.sleep();
+    console.log('');
 
-console.log('');
-
-rabbit.jump();
-fish.swimming();
-dog.bark();
+    rabbit.jump();
+    fish.swimming();
+    dog.bark();
 
  */
 
 /* SUPER
-// keyword is used in classes to call the contructor or 
-// acces the properties and methods of a parent (superclass)
-// this = this object
-// super - the parent
+    // keyword is used in classes to call the contructor or 
+    // acces the properties and methods of a parent (superclass)
+    // this = this object
+    // super - the parent
 
-class Animal {
-    constructor(name, age) {
-        this.name = name,
-        this.age = age
+    class Animal {
+        constructor(name, age) {
+            this.name = name,
+            this.age = age
+        }
+
+        move(speed) {
+            console.log(`${this.name} moves at a speed of ${speed}km/h`)
+        }
+
+    }
+    class Rabbit extends Animal {
+        constructor(name, age, runspeed) {
+            super(name, age);
+            this.runspeed = runspeed
+        }
+
+        run() {
+            console.log(`${this.name} can run`);
+            super.move(this.runspeed);
+        }
+
+    }
+    class Fish extends Animal {
+        constructor(name, age, swimspeed) {
+            super(name, age);
+            this.swimspeed = swimspeed
+        }
+
+        swim() {
+            console.log(`${this.name} can swim`);
+            super.move(this.swimspeed);
+        }
+
+    }
+    class Bird extends Animal {
+        constructor(name, age, flyspeed) {
+            super(name, age);
+            this.flyspeed = flyspeed
+        }
+
+        fly() {
+            console.log(`${this.name} can fly`);
+            super.move(this.flyspeed);
+        }
+
     }
 
-    move(speed) {
-        console.log(`${this.name} moves at a speed of ${speed}km/h`)
-    }
-
-}
-class Rabbit extends Animal {
-    constructor(name, age, runspeed) {
-        super(name, age);
-        this.runspeed = runspeed
-    }
-
-    run() {
-        console.log(`${this.name} can run`);
-        super.move(this.runspeed);
-    }
-
-}
-class Fish extends Animal {
-    constructor(name, age, swimspeed) {
-        super(name, age);
-        this.swimspeed = swimspeed
-    }
-
-    swim() {
-        console.log(`${this.name} can swim`);
-        super.move(this.swimspeed);
-    }
-
-}
-class Bird extends Animal {
-    constructor(name, age, flyspeed) {
-        super(name, age);
-        this.flyspeed = flyspeed
-    }
-
-    fly() {
-        console.log(`${this.name} can fly`);
-        super.move(this.flyspeed);
-    }
-
-}
-
-const rabbit = new Rabbit("Heniek", 5, 60);
-const fish = new Fish("Tadek", 3, 20);
-const bird = new Bird("Krzysiu", 5, 50);
-console.log(rabbit);
-rabbit.run(); 
-console.log("");
-fish.swim();
-console.log("");
-bird.fly();
+    const rabbit = new Rabbit("Heniek", 5, 60);
+    const fish = new Fish("Tadek", 3, 20);
+    const bird = new Bird("Krzysiu", 5, 50);
+    console.log(rabbit);
+    rabbit.run(); 
+    console.log("");
+    fish.swim();
+    console.log("");
+    bird.fly();
 
  */
 
 /* SETTER and GETTER
 
-class Rectangle {
-    constructor(width, height) {
-        this.width = width;
-        this.height = height;
-    }
-
-    set width(newWidth) {
-        if(newWidth > 0) {
-            this._width = newWidth;
+    class Rectangle {
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
         }
-        else { 
-            console.error('Width must be a positive number!');
+
+        set width(newWidth) {
+            if(newWidth > 0) {
+                this._width = newWidth;
+            }
+            else { 
+                console.error('Width must be a positive number!');
+            }
+        }
+
+        set height(newHeight) {
+            if(newHeight > 0) {
+                this._height = newHeight;
+            }
+            else {
+                console.error("Height must be a positive number!");
+            }
+        }
+
+        get width() {
+            return `${this._width.toFixed(1)} cm`;
+        }
+
+        get height() {
+            return `${this._height.toFixed(1)} cm`;
+        }
+
+        get area() {
+            return `${(this._width * this._height).toFixed(1)} cm^2 `;
+        }
+        get mom() {
+            if( this._width !== this._height ) {
+                return `mom is mad`;
+            }
+            else {
+                return `mom is happy`
+            }
         }
     }
 
-    set height(newHeight) {
-        if(newHeight > 0) {
-            this._height = newHeight;
-        }
-        else {
-            console.error("Height must be a positive number!");
-        }
-    }
+    const rectangle1 = new Rectangle(4, 4);
 
-    get width() {
-        return `${this._width.toFixed(1)} cm`;
-    }
-
-    get height() {
-        return `${this._height.toFixed(1)} cm`;
-    }
-
-    get area() {
-        return `${(this._width * this._height).toFixed(1)} cm^2 `;
-    }
-    get mom() {
-        if( this._width !== this._height ) {
-            return `mom is mad`;
-        }
-        else {
-            return `mom is happy`
-        }
-    }
-}
-
-const rectangle1 = new Rectangle(4, 4);
-
-console.log(rectangle1.width);
-console.log(rectangle1.height);
-console.log(rectangle1.area);
-console.log(rectangle1.mom);
+    console.log(rectangle1.width);
+    console.log(rectangle1.height);
+    console.log(rectangle1.area);
+    console.log(rectangle1.mom);
 
 */
 
@@ -984,48 +984,48 @@ console.log(rectangle1.mom);
 
 /* NESTED OBJECTS
 
-const person = {
-    name: "Wiktor",
-    surname: "czkafek",
-    age: 69,
-    addres: {
-        street: "Candy 42 st.",
-        country: "Poland",
-        continent: "Europe"
+    const person = {
+        name: "Wiktor",
+        surname: "czkafek",
+        age: 69,
+        addres: {
+            street: "Candy 42 st.",
+            country: "Poland",
+            continent: "Europe"
+        }
     }
-}
-console.log(person.addres);
+    console.log(person.addres);
 
-for( const property in person.addres) {
-    console.log(person.addres[property]);
-}
-
-class Person {
-
-    constructor(name, surname, age, ...address) {
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
-        this.address = new Address(...address);
+    for( const property in person.addres) {
+        console.log(person.addres[property]);
     }
-}
 
-class Address {
+    class Person {
 
-    constructor(street, country, continent) {
-        this.street = street;
-        this.country = country;
-        this.continent = continent;
+        constructor(name, surname, age, ...address) {
+            this.name = name;
+            this.surname = surname;
+            this.age = age;
+            this.address = new Address(...address);
+        }
     }
-}
 
-const person1 = new Person("Wiktor", "Czkafek", 15, "Cukierkowa 15", "Polska", "Europa");
-console.log(person1);
-console.log(person1.address)
+    class Address {
 
-for(const property in person1.address) {
-    console.log(person1.address[property]);
-}
+        constructor(street, country, continent) {
+            this.street = street;
+            this.country = country;
+            this.continent = continent;
+        }
+    }
+
+    const person1 = new Person("Wiktor", "Czkafek", 15, "Cukierkowa 15", "Polska", "Europa");
+    console.log(person1);
+    console.log(person1.address)
+
+    for(const property in person1.address) {
+        console.log(person1.address[property]);
+    }
 
  */
 
@@ -1061,21 +1061,56 @@ for(const property in person1.address) {
  */
 
 
-/* sort() METHOD */
+/* sort() METHOD
 
-let numbers = [1, 10, 8 , 9, 2, 3, 18, 7];
+    let numbers = [1, 10, 8 , 9, 2, 3, 18, 7];
 
-numbers.sort((a, b) => a-b);
-console.log(numbers);
+    numbers.sort((a, b) => a-b);
+    console.log(numbers);
 
-const people = [{name: 'Wiktor', age: 15, height: 188}, 
-              {name: 'Gocha', age: 16, height: 161}, 
-              {name: 'Chomik', age: 14, height: 167}, 
-              {name: 'Adam', age: 15, height: 175}];
+    const people = [{name: 'Wiktor', age: 15, height: 188}, 
+                {name: 'Gocha', age: 16, height: 161}, 
+                {name: 'Chomik', age: 14, height: 167}, 
+                {name: 'Adam', age: 15, height: 175}];
 
-people.sort((a, b) => a.name.localeCompare(b.name));
+    people.sort((a, b) => a.name.localeCompare(b.name));
 
-console.log(people);
+    console.log(people);
+
+ */
+
+
+/* CLOSURES
+    // function inside another function
+
+    function startGame() {
+        let score = 0;
+
+        function increasePoints(points) {
+            score += points;
+            console.log(`+${points}pts`);
+        }
+
+        function decreasePoints(points) {
+            score -= points;
+            console.log(`-${points}pts`);
+        }
+
+        function showScore() {
+            console.log(`Current score: ${score}pts`);
+        }
+
+        return {increasePoints, decreasePoints, showScore};
+    }
+
+    const newGame = startGame();
+
+    newGame.increasePoints(8);
+    newGame.increasePoints(2);
+    newGame.decreasePoints(4);
+    newGame.showScore();
+
+ */
 
 
 
