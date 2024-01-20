@@ -1,0 +1,21 @@
+body {
+    margin: 0px;
+    background-image: url(digital-cozy-wallpaper.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#clock-cointainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#clock {
+    font-size: 7rem;
+    font-family: roboto;
+    color: white;
+    backdrop-filter: blur(15px);
+    width: 100%;
+    text-align: center;
+}
