@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    
+    <title>Vue Basics</title>
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <style>
+
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <nav 
+        class="navbar navbar-expand-lg"
+        :class="{'navbar-light bg-light': !useDarkNavbar, 'navbar-dark bg-dark': useDarkNavbar}"
+    >
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">My Vue</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row align-items-center">
+                <li v-for="(page, index) in pages"  class="nav-item" :key="index">
+                    <a
+                        aria-current="page"
+                        class="nav-link px-2 "
+                        :class="{active: activePage == index}"
+                        :href="page.link.url"
+                        :title="`This link goes to the ${page.link.text}`"
+                        @click.prevent="activePage = index"
+                    >   {{ page.link.text }}</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <button 
+                    class="btn btn-primary"
+                    :class="{'btn-light': useDarkNavbar, 'btn-dark': !useDarkNavbar}"
+                    @click.prevent="useDarkNavbar = !useDarkNavbar"
+                >Toggle Nav</button>
+            </form>
+        </div>
+    </nav>
+
+    <div id="content" class="container">
+        <h1> {{ pages[activePage].pageTitle }}</h1>
+        <p>{{ pages[activePage].pageContent }}</p>
+    </div>
+
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    activePage: 0,
+                    useDarkNavbar: false,
+                    pages: [
+                        {
+                            link: {text: 'Home', url: 'vue.html'},
+                            pageTitle: 'Home Page',  
+                            pageContent: 'Welcome to the Home Page',
+                        },
+                        {
+                            link: {text: 'About', url: 'about.html'},
+                            pageTitle: 'About Page',  
+                            pageContent: 'Welcome to the About Page',
+                        },
+                        {
+                            link: {text: 'Contact', url: 'contact.html'},
+                            pageTitle: 'Contact Page',  
+                            pageContent: 'Welcome to the Contact Page',
+                        }
+                    ]
+
+                };
+            }
+        }).mount('body');
+    </script>
+</body>
+</html>

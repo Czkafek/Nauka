@@ -1,0 +1,44 @@
+body {
+ font-family: roboto;
+ background-color: rgb(235, 235, 235);
+ color: rgb(16, 16, 16);
+}
+#stopWatch-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#stopWatch {
+    font-size: 7rem;
+}
+.buttons {
+    display: flex;
+    column-gap: 20px;
+}
+.start {
+    background-color: rgb(55, 178, 55);
+}
+.stop {
+    background-color: rgb(201, 77, 77);
+}
+.clear {
+    background-color: rgb(55, 112, 178);
+}
+.start,
+.stop,
+.clear {
+    border: 1px solid rgb(48, 48, 48);
+    border-radius: 100px;
+    padding: 5px 15px 5px 15px;
+    color: rgb(240, 240, 240);
+    transition: opacity 0.2s;
+    font-size: 2rem;
+}
+
+.start:hover,
+.stop:hover,
+.clear:hover {
+    opacity: 0.8;
+}
