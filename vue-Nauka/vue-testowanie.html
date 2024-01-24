@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+    <body>
+        
+        <nav 
+            class="navbar navbar-expand-lg mb-2" 
+            :class="{'navbar-light bg-light': !useDarkMode, 'navbar-dark bg-dark': useDarkMode}">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">My Vue</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row align-items-center">
+                    <li v-for="(page, index) in pages" class="nav-item" :key="index">
+                        <a href="page.link.url"
+                        class="nav-link px-2"
+                        :class="{active: activePage == index}"
+                        @click.prevent="activePage = index"
+                        aria-current="page"
+                        :title="`This link goes to the ${page.link.text}`">
+                        {{ page.link.name }}</a>
+                    </li>
+                </ul>
+                <form class="d-form">
+                    <button
+                    class="btn"
+                    :class="{'btn-light': useDarkMode, 'btn-dark': !useDarkMode}"
+                    @click.prevent="useDarkMode = !useDarkMode ">
+                        Change theme
+                    </button>
+                </form>
+            </div>
+        </nav>
+
+        <div class="container">
+            <h1> {{ pages[activePage].pageTitle }} </h1>
+            <p> {{ pages[activePage].pageContent }} </p>
+        </div>
+
+        <script>
+            Vue.createApp({
+                data() {
+                    return {
+                        useDarkMode: true,
+                        activePage: 0,
+                        pages: [
+                            {
+                                link: {name: 'Home', url: 'vue-testowanie.html'},
+                                pageTitle: 'Home Page',
+                                pageContent: 'Welcome to our Home Page'
+                            },
+                            {
+                                link: {name: 'About us', url: 'about-us.html'},
+                                pageTitle: 'About us Page',
+                                pageContent: 'Welcome to our About us Page'
+                            },
+                            {
+                                link: {name: 'Contact', url: 'contact.html'},
+                                pageTitle: 'Contact Page',
+                                pageContent: 'Welcome to our Contact Page'
+                            }
+                        ]
+                    }
+
+                }
+
+            }).mount('body');    
+        </script>
+    </body>
+</html>
