@@ -3,72 +3,96 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>vue testowanie</title>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     </head>
     <body>
         
         <nav 
-            class="navbar navbar-expand-lg mb-2" 
-            :class="{'navbar-light bg-light': !useDarkMode, 'navbar-dark bg-dark': useDarkMode}">
-            <div class="container-fluid">
-                <a href="#" class="navbar-brand">My Vue</a>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row align-items-center">
-                    <li v-for="(page, index) in pages" class="nav-item" :key="index">
-                        <a href="page.link.url"
-                        class="nav-link px-2"
-                        :class="{active: activePage == index}"
-                        @click.prevent="activePage = index"
-                        aria-current="page"
-                        :title="`This link goes to the ${page.link.text}`">
-                        {{ page.link.name }}</a>
+            :class="[ `navbar-${theme}`, `bg-${theme}`, 'navbar', 'navbar-expand-lg']"
+        >
+        <div class="container-fluid">
+            <a class="navbar-brand mb-2" href="#">My Vue</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row align-items-center">
+                <li v-for="(page, index) in pages"  class="nav-item" :key="index">
+                    <a
+                            href="page.link.url" 
+                            class="nav-link px-2"
+                            :class="{active: activePage == index}"
+                            aria-current="page"
+                            @click.prevent="activePage = index">
+                            {{ page.link.name }}</a>
                     </li>
                 </ul>
-                <form class="d-form">
-                    <button
-                    class="btn"
-                    :class="{'btn-light': useDarkMode, 'btn-dark': !useDarkMode}"
-                    @click.prevent="useDarkMode = !useDarkMode ">
-                        Change theme
+                <form class="d-flex">
+                    <button :class="['btn', `btn-${btnTheme}`]" @click.prevent="changeTheme()">
+                        Change Theme
                     </button>
                 </form>
             </div>
         </nav>
 
-        <div class="container">
-            <h1> {{ pages[activePage].pageTitle }} </h1>
-            <p> {{ pages[activePage].pageContent }} </p>
-        </div>
+        
+        <page-viewer
+            :page="pages[activePage]"
+        ></page-viewer>
 
         <script>
-            Vue.createApp({
+             let app = Vue.createApp({
                 data() {
                     return {
-                        useDarkMode: true,
+                        theme: 'dark',
+                        btnTheme: 'light',
                         activePage: 0,
                         pages: [
                             {
                                 link: {name: 'Home', url: 'vue-testowanie.html'},
                                 pageTitle: 'Home Page',
-                                pageContent: 'Welcome to our Home Page'
+                                pageContent: 'Welcome to Home Page'
                             },
                             {
-                                link: {name: 'About us', url: 'about-us.html'},
+                                link: {name: 'About us', url: 'vue-testowanie.html'},
                                 pageTitle: 'About us Page',
-                                pageContent: 'Welcome to our About us Page'
+                                pageContent: 'Welcome to About us Page'
                             },
                             {
-                                link: {name: 'Contact', url: 'contact.html'},
+                                link: {name: 'Contact', url: 'vue-testowanie.html'},
                                 pageTitle: 'Contact Page',
-                                pageContent: 'Welcome to our Contact Page'
+                                pageContent: 'Welcome to Contact Page'
                             }
                         ]
                     }
+                },
+                methods: {
+                    changeTheme() {
+                        let theme = 'light';
+                        let btnTheme = 'light';
 
+                        if ( this.theme == 'light' ) {
+                            theme = 'dark';
+                        }
+                        else {
+                            btnTheme = 'dark';
+                        }
+
+                        this.btnTheme = btnTheme;
+                        this.theme = theme;
+                    }
                 }
+             })
+              
+             app.component('page-viewer', {
+                props: ['page'],
+                template: `
+                <div class="container">
+                    <h1>{{ page.pageTitle }}</h1> <!-- dostarczamy prop 'page', który został zdefiniowany na górze jako page[activePage], dzięki czemu uzyskujemy efekt: pages[activePage].pageTitle -->
+                    <p>{{ page.pageContent }}</p>
+                </div>
+                `
+             }) ;
 
-            }).mount('body');    
+             app.mount('body');
         </script>
     </body>
 </html>
