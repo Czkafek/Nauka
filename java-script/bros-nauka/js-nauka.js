@@ -1112,6 +1112,10 @@ User.getUserCount();
 
  */
 
+import {PI} from './mathSmth.js';
+
+console.log(PI);
+
 
 
 

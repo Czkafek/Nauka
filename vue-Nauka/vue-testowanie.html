@@ -9,30 +9,12 @@
     </head>
     <body>
         
-        <nav 
-            :class="[ `navbar-${theme}`, `bg-${theme}`, 'navbar', 'navbar-expand-lg']"
-        >
-        <div class="container-fluid">
-            <a class="navbar-brand mb-2" href="#">My Vue</a>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row align-items-center">
-                <li v-for="(page, index) in pages"  class="nav-item" :key="index">
-                    <a
-                            href="page.link.url" 
-                            class="nav-link px-2"
-                            :class="{active: activePage == index}"
-                            aria-current="page"
-                            @click.prevent="activePage = index">
-                            {{ page.link.name }}</a>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <button :class="['btn', `btn-${btnTheme}`]" @click.prevent="changeTheme()">
-                        Change Theme
-                    </button>
-                </form>
-            </div>
-        </nav>
-
+        
+        <navbar
+            :pages="pages"
+            :active-page="activePage"
+            :nav-link-click="(index) => activePage = index"
+        ></navbar>
         
         <page-viewer
             :page="pages[activePage]"
@@ -42,8 +24,6 @@
              let app = Vue.createApp({
                 data() {
                     return {
-                        theme: 'dark',
-                        btnTheme: 'light',
                         activePage: 0,
                         pages: [
                             {
@@ -64,6 +44,51 @@
                         ]
                     }
                 },
+             })
+              
+             app.component('page-viewer', {
+                props: ['page'],
+                template: `
+                <div class="container">
+                    <h1>{{ page.pageTitle }}</h1> <!-- dostarczamy prop 'page', który został zdefiniowany na górze jako page[activePage], dzięki czemu uzyskujemy efekt: pages[activePage].pageTitle -->
+                    <p>{{ page.pageContent }}</p>
+                </div>
+                `
+             }) ;
+
+             app.component( 'navbar' ,{
+                props: ['pages', 'activePage', 'navLinkClick'],
+                template: `
+                <nav 
+                    :class="[ \`navbar-\${theme}\`, \`bg-\${theme}\`, 'navbar', 'navbar-expand-lg']"
+                >
+                <div class="container-fluid">
+                    <a class="navbar-brand mb-2" href="#">My Vue</a>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex flex-row align-items-center">
+                        <li v-for="(page, index) in pages"  class="nav-item" :key="index">
+                            <a
+                                    href="page.link.url" 
+                                    class="nav-link px-2"
+                                    :class="{active: activePage == index}"
+                                    aria-current="page"
+                                    @click.prevent="navLinkClick(index)">
+                                    {{ page.link.name }}</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex">
+                            <button :class="['btn', \`btn-\${btnTheme}\`]" @click.prevent="changeTheme()">
+                                Change Theme
+                            </button>
+                        </form>
+                    </div>
+                </nav>
+                `,
+                data() {
+                    return {
+                        theme: 'dark',
+                        btnTheme: 'light',
+                    }
+                },
                 methods: {
                     changeTheme() {
                         let theme = 'light';
@@ -80,16 +105,6 @@
                         this.theme = theme;
                     }
                 }
-             })
-              
-             app.component('page-viewer', {
-                props: ['page'],
-                template: `
-                <div class="container">
-                    <h1>{{ page.pageTitle }}</h1> <!-- dostarczamy prop 'page', który został zdefiniowany na górze jako page[activePage], dzięki czemu uzyskujemy efekt: pages[activePage].pageTitle -->
-                    <p>{{ page.pageContent }}</p>
-                </div>
-                `
              }) ;
 
              app.mount('body');
