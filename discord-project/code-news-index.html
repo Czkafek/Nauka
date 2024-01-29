@@ -11,13 +11,16 @@
 </head>
 <body>
     <div class="navbar">
-        <div class="logo-container">
-            <img src="codeNews-logo.png" alt="CodeNewsLogo" class="logo">
-        </div>
-        <div class="navbar-content">
+        <div class="padding"></div>
+        <div class="left-side-navbar">
+            <div class="logo">
+                <img src="codeNews-logo.png" alt="CodeNewsLogo">
+            </div>
             <div class="navbar-title">
                 <p class="title">CodeNews</p>
             </div>
+        </div>
+        <div class="right-side-navbar">
             <div class="navbar-options">
                 <div class="notification">
                     <img src="notification-icon.png" alt="notificationIcon" class="notification-icon">
@@ -27,6 +30,7 @@
                 </div>
             </div>
         </div>
+        <div class="padding"></div>
     </div>
 
 
@@ -36,61 +40,299 @@
         </div>
     </div>
 
-
     <hr>
 
-    <div class="flex-news-container">
-        <div class="first-flex">
-            <div class="horizontal-news">
-                <p class="news-desc">Ponad 1/3 polskich firm korzysta już ze wsparcia AI. Poznajcie wyniki raportu "AI i rynek pracy w Polsce".</p>
-                <div class="gradient"></div>
-                <img src="horizontal-news-image.png" alt="newsBanner">
+    <div class="news-container">
+        <div class="flex-news-container">
+            <div class="first-flex">
+                <div class="horizontal-news">
+                    <p class="news-desc">Ponad 1/3 polskich firm korzysta już ze wsparcia AI. Poznajcie wyniki raportu "AI i rynek pracy w Polsce".</p>
+                    <div class="gradient"></div>
+                    <img src="horizontal-news-image.png" alt="newsBanner">
+                </div>
             </div>
-        </div>
-        <div class="seconed-flex">
-            <div class="vertical-flex">
+
+            <div class="seconed-flex">
                 <div class="vertical-news">
                     <p class="news-desc">Ponad 1/3 polskich firm korzysta już ze wsparcia AI. Poznajcie wyniki raportu "AI i rynek pracy w Polsce".</p>
                     <div class="gradient"></div>
                     <img src="vertical-news-image.jpg" alt="newsBanner">
                 </div>
-            </div>
-            <div class="squares-flex">
-                <div class="square-one-news">
-                    <p class="news-desc">Ponad 1/3 polskich firm korzysta już ze wsparcia AI. Poznajcie wyniki raportu "AI i rynek pracy w Polsce".</p>
-                    <div class="gradient"></div>
-                    <img src="square-one-image.png" alt="newsBanner">
-                </div>
-                <div class="square-two-news">
-                    <p class="news-desc">Ponad 1/3 polskich firm korzysta już ze wsparcia AI. Poznajcie wyniki raportu "AI i rynek pracy w Polsce".</p>
-                    <div class="gradient"></div>
-                    <img src="square-two-image.png" alt="newsBanner">
+                <div class="squares-flex">
+                    <div class="square-one-news">
+                        <p class="news-desc">Ponad 1/3 polskich firm korzysta już ze wsparcia AI. Poznajcie wyniki raportu "AI i rynek pracy w Polsce".</p>
+                        <div class="gradient"></div>
+                        <img src="square-one-image.png" alt="newsBanner">
+                    </div>
+                    <div class="square-two-news">
+                        <p class="news-desc">Ponad 1/3 polskich firm korzysta już ze wsparcia AI. Poznajcie wyniki raportu "AI i rynek pracy w Polsce".</p>
+                        <div class="gradient"></div>
+                        <img src="square-two-image.png" alt="newsBanner">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="news-slider-container">
-        <div class="news-slider-title">
-            <p>Zastanawiam się,</p>
-            <p>co się dzieje na tym świecie</p>
-            <div class="news-slider-title-underline"></div>
+    <hr>
+
+    <section id="Security"></section>
+    <div class="news-category-container">
+        <div class="news-category-title">
+            <div class="padding"></div>
+            <p>Bezpieczeństwo</p>
         </div>
-        <div class="news-slider">
-            <div class="slider-item">
-                <img src="reddit-news.webp" alt="newsBanner">
+
+        <div class="news-category">
+            <div class="news-category-item" onclick="changePage()">
+                <div class="news-category-item-img">
+                    <img src="bezpieczenstwo-news.webp" alt="newsBanner">
+                </div>
+                <p>Pojawiła się nowa metoda atakowania firm i osób, które padły ofiarą oprogramowania ransomware</p>
             </div>
-            <div class="slider-item">
-                <img src="nasa-news.webp" alt="newsBanner">
+            <div class="news-category-item"  onclick="changePage()">
+                <div class="news-category-item-img">
+                    <img src="bezpieczenstwo-news.webp" alt="newsBanner">
+                </div>
+                <p>Pojawiła się nowa metoda atakowania firm i osób, które padły ofiarą oprogramowania ransomware</p>
             </div>
-            <div class="slider-item">
-                <img src="redhat-news.webp" alt="newsBanner">
+            <div class="news-category-item"  onclick="changePage()">
+                <div class="news-category-item-img">
+                    <img src="bezpieczenstwo-news.webp" alt="newsBanner">
+                </div>
+                <p>Pojawiła się nowa metoda atakowania firm i osób, które padły ofiarą oprogramowania ransomware</p>
             </div>
         </div>
     </div>
 
+    <section id="AI"></section>
+    <div class="news-category-container">
+        <div class="news-category-title">
+            <div class="padding"></div>
+            <p>Sztuczna Inteligencja</p>
+        </div>
 
+        <div class="news-category">
+            <div class="news-category-item"  onclick="changePage()">
+                <div class="news-category-item-img">
+                    <img src="bezpieczenstwo-news.webp" alt="newsBanner">
+                </div>
+                <p>Pojawiła się nowa metoda atakowania firm i osób, które padły ofiarą oprogramowania ransomware</p>
+            </div>
+            <div class="news-category-item"  onclick="changePage()">
+                <div class="news-category-item-img">
+                    <img src="bezpieczenstwo-news.webp" alt="newsBanner">
+                </div>
+                <p>Pojawiła się nowa metoda atakowania firm i osób, które padły ofiarą oprogramowania ransomware</p>
+            </div>
+            <div class="news-category-item"  onclick="changePage()">
+                <div class="news-category-item-img">
+                    <img src="bezpieczenstwo-news.webp" alt="newsBanner">
+                </div>
+                <p>Pojawiła się nowa metoda atakowania firm i osób, które padły ofiarą oprogramowania ransomware</p>
+            </div>
+        </div>
+    </div>
 
+    <section id="BigData"></section>
+    <div class="news-category-container">
+        <div class="news-category-title">
+            <div class="padding"></div>
+            <p>Big Data</p>
+        </div>
+
+        <div class="news-category">
+            <div class="news-category-item"  onclick="changePage()">
+                <div class="news-category-item-img">
+                    <img src="bezpieczenstwo-news.webp" alt="newsBanner">
+                </div>
+                <p>Pojawiła się nowa metoda atakowania firm i osób, które padły ofiarą oprogramowania ransomware</p>
+            </div>
+            <div class="news-category-item"  onclick="changePage()">
+                <div class="news-category-item-img">
+                    <img src="bezpieczenstwo-news.webp" alt="newsBanner">
+                </div>
+                <p>Pojawiła się nowa metoda atakowania firm i osób, które padły ofiarą oprogramowania ransomware</p>
+            </div>
+            <div class="news-category-item"  onclick="changePage()">
+                <div class="news-category-item-img">
+                    <img src="bezpieczenstwo-news.webp" alt="newsBanner">
+                </div>
+                <p>Pojawiła się nowa metoda atakowania firm i osób, które padły ofiarą oprogramowania ransomware</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="newsletter">
+        <p>Za mało?</p>
+        <p>Zapisz się na nasz newsletter!</p>
+        <input type="text" placeholder="Email" id="inputOne">
+        <button onclick=" clearInput() ">Zapisz</button>
+    </div>
+
+    <section id="ItWork"></section>
+    <div class="news-category-container">
+        <div class="news-category-title">
+            <div class="padding"></div>
+            <p>Praca w IT</p>
+        </div>
+
+        <div class="news-category">
+            <div class="news-category-item" onclick="changePage()">
+                <div class="news-category-item-img">
+                    <img src="bezpieczenstwo-news.webp" alt="newsBanner">
+                </div>
+                <p>Pojawiła się nowa metoda atakowania firm i osób, które padły ofiarą oprogramowania ransomware</p>
+            </div>
+            <div class="news-category-item" onclick="changePage()">
+                <div class="news-category-item-img">
+                    <img src="bezpieczenstwo-news.webp" alt="newsBanner">
+                </div>
+                <p>Pojawiła się nowa metoda atakowania firm i osób, które padły ofiarą oprogramowania ransomware</p>
+            </div>
+            <div class="news-category-item" onclick="changePage()">
+                <div class="news-category-item-img">
+                    <img src="bezpieczenstwo-news.webp" alt="newsBanner">
+                </div>
+                <p>Pojawiła się nowa metoda atakowania firm i osób, które padły ofiarą oprogramowania ransomware</p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="news-category-container">
+        <div class="news-category">
+            <div class="news-category-item" onclick="changePage()">
+                <div class="news-category-item-img">
+                    <img src="bezpieczenstwo-news.webp" alt="newsBanner">
+                </div>
+                <p>Pojawiła się nowa metoda atakowania firm i osób, które padły ofiarą oprogramowania ransomware</p>
+            </div>
+            <div class="news-category-item" onclick="changePage()">
+                <div class="news-category-item-img">
+                    <img src="bezpieczenstwo-news.webp" alt="newsBanner">
+                </div>
+                <p>Pojawiła się nowa metoda atakowania firm i osób, które padły ofiarą oprogramowania ransomware</p>
+            </div>
+            <div class="news-category-item" onclick="changePage()">
+                <div class="news-category-item-img">
+                    <img src="bezpieczenstwo-news.webp" alt="newsBanner">
+                </div>
+                <p>Pojawiła się nowa metoda atakowania firm i osób, które padły ofiarą oprogramowania ransomware</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="next-page">
+        <div class="active-page">
+            <p>1</p>
+        </div>
+        <div class="page">
+            <a href="page.html"><p>2</p></a>
+        </div>
+        <div class="page">
+            <a href="page.html"><p>3</p></a>
+        </div>
+        <div class="page">
+            <a href="page.html"><p>4</p></a>
+        </div>
+        <div class="page">
+            <a href="page.html"><p>5</p></a>
+        </div>
+        <div class="dots">
+            <p>...</p>
+        </div>
+        <div class="next-page-text">
+            <a href="page.html"><p>Następna strona ▶</p></a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-title">
+            <div class="footer-logo">
+                <img src="codeNews-logo.png" alt="CodeNewsLogo">
+            </div>
+            <p>
+                CodeNews
+            </p>
+        </div>
+        <div class="footer-content">
+            <div class="find-us">
+                <div class="find-us-main">
+                    <p>Znajdź nas:</p>
+                </div>
+                <div class="find-us-option">
+                    <div class="find-us-img">
+                        <img src="discord-logo.webp" alt="discord">
+                    </div>
+                    <p>Czkafek</p>
+                </div>
+                <div class="find-us-option">
+                    <div class="find-us-img">
+                        <img src="discord-logo.webp" alt="discord">
+                    </div>
+                    <p>IRQ3</p>
+                </div>
+            </div>
+            <div class="categories">
+                <div class="categories-main">
+                    <p>Kategorie:</p>
+                </div>
+                <a href="#Security">
+                    <div class="categories-option">
+                            <div class="categories-img">
+                                <img src="security.png" alt="discord">
+                            </div>
+                            <p>Bezpieczeństwo</p>
+                    </div>
+                </a>
+                <a href="#AI">
+                    <div class="categories-option">
+                        <div class="categories-img">
+                            <img src="artificial-intelligence (1).png" alt="discord">
+                        </div>
+                        <p>Sztuczna Inteligencja</p>
+                    </div>
+                </a>
+                <a href="#BigData">
+                    <div class="categories-option">
+                        <div class="categories-img">
+                            <img src="database (1).png" alt="discord">
+                        </div>
+                        <p>Big Data</p>
+                    </div>
+                </a>
+                <a href="#ItWork">
+                    <div class="categories-option">
+                        <div class="categories-img">
+                            <img src="itwork-icon (2).png" alt="discord">
+                        </div>
+                        <p>Praca w IT</p>
+                    </div>
+                </a>
+            </div>
+            <div class="footer-newsletter">
+                <div class="footer-newsletter-container">
+                    <div class="newsletter-icon">
+                        <img src="newsletter.png" alt="newsletterIcon">
+                    </div>
+                    <div class="newsletter-content">
+                        <p>Zapisz się na newsletter!</p>
+                        <div class="footer-newsletter-input">
+                            <input type="text" placeholder="Email" id="inputTwo">
+                            <button onclick=" clearInput() ">Zapisz</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="curve">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </div>
 
 
 

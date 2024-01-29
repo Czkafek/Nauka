@@ -1,0 +1,144 @@
+body {
+    font-family: Poppins;
+    color: #fff;
+    background-color: #161d30;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    width: 100vw;
+    overflow: hidden;
+    background-color: #212a40;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.logo-container {
+    width: 6em;
+    height: 6em;
+    margin: 2em;
+}
+.logo {
+    width: 100%;
+    object-fit: cover;
+}
+
+.next-page-text {
+    background-color: #141414;
+    color: #D9D9D9;
+    border-radius: 10px;
+    padding: 0.2% 0.4% 0.2% 0.4%;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.next-page-text a {
+    color: #ffffff;
+}
+.next-page-text:hover {
+    opacity: 0.8;
+}
+a {
+    text-decoration: none;
+    color: #141414;
+    transition: opacity 0.2s;
+}
+a:hover {
+    opacity: 0.8;
+}
+.next-page {
+    font-size: 1em;
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 4vw;
+    padding-bottom: 1vw;
+    padding-top: 3vw;
+}
+.next-page p{
+    margin: 0px;
+}
+
+.navbar-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.site-name {
+    margin: 0em;
+    font-size: 4em;
+    font-family: "Space Mono", monospace;
+}
+
+.navbar-options {
+    display: flex;
+}
+
+.notification {
+    width: 3em;
+    height: 3em;
+    background-color: #161d30;
+    border-radius: 100px;
+    padding: 1em;
+    margin-right: 1em;
+}
+
+.notification-icon {
+    width: 100%;
+}
+
+.account {
+    width: 3em;
+    height: 3em;
+    background-color: #161d30;
+    border-radius: 100px;
+    padding: 1em;
+    margin-right: 1em;
+}
+
+.account-icon {
+    width: 100%;
+}
+
+.container {
+    margin: 0;
+    padding: 5em;
+    padding-top: 3em;
+}
+
+.title {
+    font-size: 3em;
+    font-family: "Oswald", sans-serif;
+}
+
+.bigger-text {
+    font: 1em;
+    font-weight: 500;
+}
+
+.simple-text {
+    font: 1em;
+    font-weight: 400;
+}
+
+.likepicture {
+    height: 80px;
+}
+
+.picture {
+    margin: 0;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    width: 50vw;
+    border-radius: 10%;
+}
+
+.text-wrapper {
+    width: 50vw;
+}
