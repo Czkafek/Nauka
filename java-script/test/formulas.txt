@@ -1,0 +1,46 @@
+For Bigger half:
+
+    mid = mid + mid/2;
+
+ 
+ For Smaller half:
+
+    mid = mid - Math.round((array.length - mid) / 2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

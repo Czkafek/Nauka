@@ -1,0 +1,76 @@
+
+
+Find index of:  8
+
+1 2 3 4 5 6 7 9 10 11    at first we search the middle of an array so 
+                            mid = Math.round(array.length / 2;)
+                            mid = 6
+                        is 8 bigger or smaller than 6?
+                            it is bigger
+                            so we are searching in bigger half
+    
+    7 8 9 10 11           so mid = 6 and we have to find second mid, how do we do it?
+                        mid + rest / 2 = 6 + rest / 2
+                        mid = 9     9 = 6 + rest/2
+                                    rest/2 = 3
+                                    rest = 6
+                        mid where = 6, so we practicly have done mid + mid/2
+                        okay so mid = 9 and lets check,
+                            is 8 bigger than 9? no. Then we choose smaller half
+        
+        7 8 9               so mid = 9, we have to find second mid, how do we do it?
+                        lets try the formula from the previous example, will it work?
+                        mid = mid + mid/2, so mid = 9 + 9/2
+                                              mid = 9 + 5
+                                              mid = 14
+                        as we can see, the result is not right, we need a second
+                        formula for a situation, when we chose the smaller half,
+                        half on the left.
+
+                        mid = prev.mid + rest       by prev.mid I just want to mark
+                        mid = 8                     that it is previous mid
+                        8 = 9 + rest
+                        rest = -1
+                        how to get this -1 we can change formula so it is
+                        8 = 9 - rest
+                        so rest = 1, and we will have substraction not addition
+                        we make it by doing smth like this
+
+                        Math.floor(rest/2);   where we assume that rest = 3, but now
+                                              we have to get this 3 somehow
+                        
+                        full array: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 11 elemnts
+                        11 - 9 = 2, okay, even better, now we can just do
+
+                        Math.round(rest/2);  where rest = array.length - mid,
+                        so the formula we get:
+
+                        Math.round((array.length - mid) / 2);
+
+                        Okay so we have both formulas
+                        
+                        lets try this, I will write them now in the second fil
+                        so we have acces to them all time
+
+
+Lets try with the same array but different number to find:
+
+Number to find:  5
+
+1 2 3 4 5 6 7 8 9 10 11     at first we always search the middle of the array, so
+                            mid = Math.round(array.length/2) = 11/2 = 6
+
+
+
+        
+    
+
+
+
+
+
+
+
+
+
+
