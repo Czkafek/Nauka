@@ -45,7 +45,7 @@ Find index of:  8
                         Math.round(rest/2);  where rest = array.length - mid,
                         so the formula we get:
 
-                        Math.round((array.length - mid) / 2);
+                        mid = mid - Math.round((array.length - mid) / 2);
 
                         Okay so we have both formulas
                         
@@ -59,6 +59,55 @@ Number to find:  5
 
 1 2 3 4 5 6 7 8 9 10 11     at first we always search the middle of the array, so
                             mid = Math.round(array.length/2) = 11/2 = 6
+                            
+                            is 5 bigger then 6? no. so we choose the smaller half
+
+    1 2 3 4 5 6             we chose the smaller half so we use formula for
+                            the smaller half:
+                            mid = mid - Math.round((array.length - mid) / 2)  //forgot to add the 'mid +' practicly
+                            mid = 6 - Math.round((11 - 6) / 2)
+                            mid = 6 - Math.round(2,5)
+                            mid = 6 - 3
+                            mid = 3  it's a good result
+
+                            is 5 bigger then 3? yes. so we choose the bigger half
+
+        4 5 6               we chose the bigger half so we use formula for
+                            the bigger one:
+                            mid = mid + mid/2
+                            mid = 3 + Math.round(3/2)
+                            mid = 3 + 2
+                            mid = 5  it's a good result
+
+                            is 5 bigger then 5? no. so we choose the smaller half
+
+            4 5             we chose the smaller half so we use formula for
+                            the smaller one:
+
+                            mid = mid - Math.round((array.length - mid) / 2);
+                            mid = 5 - round((11 - 5) / 2)
+                            mid = 5 - round(6/2)
+                            mid = 5 - 3
+                            mid = 2, it is not a good result
+
+                            so what should we change???
+
+                            mid should = 4, so lets find the solution 
+                            prev.mid = 5
+                            mid = 5 - rest
+                            4 = 5 - rest
+                            -1 = -rest
+                            rest = 1
+                            so we also need a 1, so there is smth wrong with
+                            formula
+
+                            Math.round((arra.length-mid)/2)
+                            Math.round((11 - 5)/2)
+                            Math.round(6/2)
+                            3
+            1 2 3 4 5 6 7 8 9 10 11
+
+            4 5 
 
 
 
