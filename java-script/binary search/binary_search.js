@@ -1,28 +1,24 @@
-let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21];
+let array = [120, 69, 420, 56798, 1245, 123, 1, 2, 3, 8, 657, 10];
 
-console.log(array.length);
-
-function findIndex(array, find) {
-    
+function bubbleSort(array) {
     let n = array.length;
-    let mid = Math.round(n / 2);
 
-    while( mid != n+1) {
-        if ( find <= array[mid] ) {
-            if ( find === array[mid]) {
-                return mid;
+    for(let i = 0; i < n; i++) {
+        for(let j = 0; j < n-1; j++) {
+            if(array[j] > array[j+1]) {
+                let tmp = array[j];
+                array[j] = array[j+1];
+                array[j+1] = tmp;
             }
-            mid = Math.round(mid/2)
-        }
-        else if ( find > array[mid] ) {
-            mid += Math.round(mid/2)
         }
     }
- 
-    return -1;
+
+    return array;
 
 }
 
-let find = findIndex(array, 30);
+let sortedArray = bubbleSort(array);
 
-console.log(find);
+for(let x of sortedArray) {
+    console.log(x);
+}
