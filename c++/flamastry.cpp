@@ -21,6 +21,12 @@ int main() {
                 if(licznik>2) {
                     wyraz[j+2-licznik] = licznik;
                     j = j+3-licznik;
+                    for(int k=j; k<licznik; k++) {
+                        wyraz[k] = ' ';
+                    }
+                    /*  
+                        Na koniec zrób pętle, która usuwa miejsca ze spacją ze stringa, dzieki czemu, nie będzie trzeba wracać j, i napraw górę
+                    */
                 }
             }
 
