@@ -1,4 +1,5 @@
 #include<iostream>
+#include <string> 
 
 using namespace std;
 
@@ -16,21 +17,25 @@ int main() {
 
             if(wyraz[j] == wyraz[j+1]) {
                 licznik++;
+                if(licznik>2) {
+                    wyraz[j] = ' ';
+                }
             }
             else {
                 if(licznik>2) {
-                    wyraz[j+2-licznik] = licznik;
-                    j = j+3-licznik;
-                    for(int k=j; k<licznik; k++) {
-                        wyraz[k] = ' ';
-                    }
-                    /*  
-                        Na koniec zrób pętle, która usuwa miejsca ze spacją ze stringa, dzieki czemu, nie będzie trzeba wracać j, i napraw górę
-                    */
+                    string licznik_word = to_string(licznik);
+                    wyraz[j+2-licznik] = licznik_word;
                 }
             }
 
         } 
+
+        for(int j=0; j<wyraz.length(); j++) {
+            if(wyraz[j] != ' ') {
+                cout<<wyraz[j];
+            }
+        }
+        cout<<endl;
 
     }
 
