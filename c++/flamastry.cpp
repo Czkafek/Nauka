@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
 
-    int d, licznik=1;
+    int d, licznik=1, where;
     string wyraz;
     cin >> d;
     
@@ -17,24 +17,22 @@ int main() {
 
             if(wyraz[j] == wyraz[j+1]) {
                 licznik++;
-                if(licznik>2) {
-                    wyraz[j] = ' ';
+                if(licznik<3) {
+                    cout<<wyraz[j];
                 }
             }
             else {
                 if(licznik>2) {
-                    string licznik_word = to_string(licznik);
-                    wyraz[j+2-licznik] = licznik_word;
+                    cout<<licznik;
                 }
+                else {
+                    cout<<wyraz[j];
+                }
+                licznik = 1;
             }
 
         } 
 
-        for(int j=0; j<wyraz.length(); j++) {
-            if(wyraz[j] != ' ') {
-                cout<<wyraz[j];
-            }
-        }
         cout<<endl;
 
     }
