@@ -14,13 +14,7 @@ int main() {
         if(n<10) {
             cout<<n<<endl;
         }
-        else if(n==rev) {
-            cout<<n<<" "<<ile<<endl;
-        }
         else {
-            if(ile!=0) {
-                ile++
-            }
             num = n;
             rev = 0;
             while(num>0) {
@@ -28,6 +22,18 @@ int main() {
                 rev = rev*10+dig; 
                 num = num/10;
             }
+            while(n!=rev) {
+                num = n;
+                rev = 0;
+                while(num>0) {
+                    dig=num%10;
+                    rev = rev*10+dig; 
+                    num = num/10;
+                }
+                ile++;
+            }
+            cout<<n<<" "<<ile<<endl;
+
         }
     }
 
