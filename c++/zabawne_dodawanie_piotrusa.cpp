@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
 
-    int t, n, ile=0, num, rev, dig;
+    int t, n, ile=0, num, rev=0, dig;
 
     cin>>t;
 
