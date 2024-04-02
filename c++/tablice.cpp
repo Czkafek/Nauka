@@ -5,15 +5,18 @@ using namespace std;
 int main() {
 
     int t, n;
-    string liczby;
     cin>>t;
 
     for(int i=0; i<t; i++) {
         cin>>n;
-        getline(cin, liczby);
+        int liczby[n];
+        
+        for(int j=0; j<n; j++) {
+            cin>>liczby[j];
+        }
 
-        for(int j=n*2-1; j>=0; j--) {
-            cout<<liczby[j];
+        for(int j=n-1; j>=0; j--) {
+            cout<<liczby[j]<<" ";
         }
     }
 
