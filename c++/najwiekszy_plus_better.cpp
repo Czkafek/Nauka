@@ -3,6 +3,10 @@
 using namespace std;
 
 int main() {
+    ios_base::sync_with_stdio(0);
+
+    cin.tie(0);
+    cout.tie(0);
 
     int n, progres=0;
     cin>>n;
@@ -15,8 +19,8 @@ int main() {
 
     int left=0;
     int right = 200000;
-    int mid;
-    while(left < right) {
+    int mid;    
+    while(left <= right) {
         mid = (left+right)/2;
         progres = 0;
         
@@ -26,7 +30,7 @@ int main() {
                 break;
             }
             else if(t[i]>mid) {
-                if(progres != mid) { // 6 5 4 6 3 5 2
+                if(progres != mid) {
                     progres++;
                 }
                 else {
@@ -41,11 +45,6 @@ int main() {
 
         }
 
-        cout<<"right: "<<right<<endl;
-        cout<<"left: "<<left<<endl;
-        cout<<"mid: "<<mid<<endl;
-        cout<<"progres: "<<progres<<endl;
-        cout<<"----------------------------------------------------------"<<endl;
         if(progres != 2*mid + 1) {
             right = mid-1;
         }
@@ -53,12 +52,7 @@ int main() {
             left = mid+1;
         }
     }
-    if(progres==0) {
-         cout<<mid-1<<endl;   
-    }
-    else {
-        cout<<mid<<endl;
-    }
+    cout<<left-1<<endl;
 
 
 
