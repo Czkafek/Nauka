@@ -10,20 +10,14 @@ int main() {
 
     cin>>n>>l;
 
-    int t[l];
-    for(int i=0; i<l; i++) {
-        cin>>t[i];
-    }
+    string t;
+    cin>>t;
 
     int r[n];
     for(int i=0; i<n; i++) {
         cin>>r[i];
     }
 
-    cout<<"n: "<<n<<endl;
-    cout<<"l: "<<l<<endl;
-    cout<<"t[l]: "<<t<<endl;
-    cout<<"r[n]: "<<r<<endl;
 
     return 0;
 }
