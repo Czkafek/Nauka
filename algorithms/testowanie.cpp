@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
 
-    long long n, r;
+    long long int n, r;
     bool warunek = true;
     cin>>n;
 
