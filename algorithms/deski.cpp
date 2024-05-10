@@ -29,6 +29,7 @@ int main() {
     int mid;
 
     while(left<=right) {
+        warunek = true;
         if(counter==10) {
             break;
         }
@@ -64,7 +65,7 @@ int main() {
         counter++;
 
     }
-    cout<<left<<endl;
+    cout<<mid+1<<endl;
 
     
 
